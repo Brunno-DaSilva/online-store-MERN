@@ -9,9 +9,11 @@ class ProductProvider extends Component {
     products: [],
     detailProduct: detailProduct
   };
+
   componentDidMount() {
     this.setProducts();
   }
+
   setProducts = () => {
     let tempProducts = [];
     storeProducts.forEach(item => {
@@ -26,8 +28,8 @@ class ProductProvider extends Component {
   handleDetails = () => {
     console.log("Hello from Details");
   };
-  addToCart = () => {
-    console.log("Hello from Carts");
+  addToCart = id => {
+    console.log(`Hello from Carts ${id}`);
   };
 
   render() {

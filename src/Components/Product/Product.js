@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 
 export default class Product extends Component {
   render() {
-    const { title, img, price, inCart } = this.props.product;
+    const { id, title, img, price, inCart } = this.props.product;
     return (
       <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
         <div className="card">
@@ -51,6 +51,7 @@ export default class Product extends Component {
 //Make sure that the props are passed with the correct dataType
 Product.propTypes = {
   product: PropTypes.shape({
+    id: PropTypes.number,
     company: PropTypes.string,
     title: PropTypes.string,
     img: PropTypes.string,
