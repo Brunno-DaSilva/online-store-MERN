@@ -8,39 +8,42 @@ export default class Product extends Component {
   render() {
     const { id, title, img, price, inCart } = this.props.product;
     return (
-      <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
-        <div className="card">
+      <ProductWrapper className="card-main-container">
+        <div className="cards-container">
           <div
-            className="img-container p-5"
+            className="card-img-holder"
             onClick={() => console.log("Go to DETAILS")}
           >
             <NavLink to="/details">
-              <img src={img} className="card-img-top" alt={title} />
+              <img src={img} className="" alt={title} />
             </NavLink>
-
-            <button
-              className="cart-btn btn-bg-cart"
-              disabled={inCart ? true : false}
-              onClick={() => {
-                console.log("added to the cart");
-              }}
-            >
-              {inCart ? (
-                <p className="text-capitalize mb-0" disabled>
-                  in cart
-                </p>
-              ) : (
-                <i className="fab fa-opencart" />
-              )}
-            </button>
           </div>
           {/*Card Footer*/}
-          <div className="card-footer d-flex justify-content-between">
-            <p className="align-self-center md-0"> {title}</p>
-            <h5 className="text-blue mb-0">
-              <span className="mr-1 fas fa-dollar-sign"></span>
-              {price}
-            </h5>
+          <div className="card-footer-holder">
+            <div className="card-footer-top">
+              <p className="product-name"> {title}</p>
+              <h5 className="product-price">
+                <span className="mr-1 fas fa-dollar-sign"></span>
+                {price}
+              </h5>
+            </div>
+            <div className="card-footer-bottom">
+              <button
+                className="btn-add-cart"
+                disabled={inCart ? true : false}
+                onClick={() => {
+                  console.log("added to the cart");
+                }}
+              >
+                {inCart ? (
+                  <p className="text-capitalize mb-0" disabled>
+                    in cart
+                  </p>
+                ) : (
+                  <i className="fab fa-opencart" />
+                )}
+              </button>
+            </div>
           </div>
         </div>
       </ProductWrapper>
@@ -61,55 +64,73 @@ Product.propTypes = {
 };
 
 const ProductWrapper = styled.div`
-  width: 25vw;
-  min-height: 50vh;
-  .card {
-    border-color: transparent;
+  .cards-container {
+    width: 30vw;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card-footer-top,
+  .card-footer-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+
+  .card-footer-holder,
+  .card-img-holder {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .card-img-holder img {
+    width: 300px;
+    height: 300px;
     transition: all 1s linear;
   }
-  .card-footer {
-    background: transparent;
-    border-top: transparent;
+
+  .btn-add-cart {
+    width: 8vw;
+    margin: 1rem;
+    padding: 1.2rem;
+    font-size: 2.1rem;
+    border: 0;
+    color: var(--main-vivid-color);
+    background-color: var(--main-bg);
+  }
+  &:focus {
+    outline: none;
+  }
+
+  .btn-add-cart:hover {
+    cursor: pointer;
+    background: var(--main-vivid-color);
+    color: var(--main-bg);
     transition: all 1s linear;
   }
-  &:hover {
-    .card {
-      border: 0.04rem solid rgba(0, 0, 0, 0.2);
-      box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
-    }
-    .card-footer {
-      background: rgba(247, 247, 247);
-    }
-  }
-  .img-container {
-    position: relative;
-    overflow: hidden;
-  }
-  .card-img-top {
-    transition: all 1s linear;
-  }
-  .img-container:hover .card-img-top {
+
+  .card-img-holder img:hover,
+  btn-add-cart:hover {
     transform: scale(1.2);
   }
-  .cart-btn {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding: 0.2rem 0.4rem;
-    background: var(--main-cool-green-color);
-    border: none;
-    color: var(--main-gray-color);
+
+  .product-name {
     font-size: 1.8rem;
-    border-radius: 0.5rem 0 0 0;
-    transform: translate(100%, 100%);
-    transition: all 1.2s ease-in-out;
+    color: var(--main-dark-gray);
   }
-  .img-container:hover .cart-btn {
-    transform: translate(0, 0);
-  }
-  .cart-btn:hover {
+  .product-price,
+  .product-price span {
+    font-size: 1.8rem;
     color: var(--main-vivid-color);
-    background: var(--main-bg);
-    cursor: pointer;
+    margin-left: 0.5rem;
+    padding: 0.2rem;
   }
 `;
