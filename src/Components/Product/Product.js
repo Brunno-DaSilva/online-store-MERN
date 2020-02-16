@@ -9,17 +9,22 @@ export default class Product extends Component {
     const { id, title, img, price, inCart } = this.props.product;
     return (
       <ProductWrapper className="card-main-container">
-        <div className="cards-container">
+        <div className="products-container">
+          <div className="product-img"></div>
+          <div className="product-footer"></div>
+        </div>
+
+        {/* <div className="cards-container">
           <div
-            className="card-img-holder"
+            className="card-img-holder image-container p-6"
             onClick={() => console.log("Go to DETAILS")}
           >
             <NavLink to="/details">
               <img src={img} className="" alt="UHum" />
             </NavLink>
-          </div>
-          {/*Card Footer*/}
-          <div className="card-footer-holder">
+          </div> */}
+        {/*Card Footer*/}
+        {/* <div className="card-footer-holder">
             <div className="card-footer-top">
               <p className="product-name"> {title}</p>
               <h5 className="product-price">
@@ -45,14 +50,14 @@ export default class Product extends Component {
                       Add to cart <i className="fab fa-opencart" />
                     </p>
                   )}
-                </button>
-              </NavLink>
+                </button> */}
+        {/* </NavLink>
               <NavLink to="/details">
                 <button className="btn-add-cart">Details</button>
               </NavLink>
             </div>
           </div>
-        </div>
+        </div> */}
       </ProductWrapper>
     );
   }
@@ -94,6 +99,7 @@ const ProductWrapper = styled.div`
   .card-footer-bottom {
     width: 100%;
     padding: 0.7rem;
+    background: gray;
   }
 
   .card-footer-holder,
@@ -116,27 +122,17 @@ const ProductWrapper = styled.div`
     padding: 0.5rem;
     font-size: 1rem;
     border: 0;
-    color: var(--main-vivid-color);
+    color: var(--main-dark-gray);
     background-color: transparent;
-    
+    &:focus {
+      outline: none;
+    }    
   }
-  &:focus {
-    outline: none;
-  }
+  
   .btn-add-cart:hover {
     cursor: pointer;
-    background: var(--main-vivid-color);
-    color: var(--main-bg);
-    transition: all 1s linear;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    transform: scale(0.9);
-  }
-
-  .card-img-holder img:hover,
-  btn-add-cart:hover {
-    transform: scale(1.1);
+    color: var(--main-vivid-color);   
+    border-radius: 4px;    
   }
 
   .product-name {
