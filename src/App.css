@@ -32,7 +32,18 @@
 
 body {
   font-family: "Open Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.main-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .app-text-title {
   font-family: "Open Sans", sans-serif;
   letter-spacing: 1rem;
@@ -42,7 +53,7 @@ body {
   color: var(--main-dark-gray);
   font-weight: none !important;
   border-left: 5px solid #f0ad46;
-  padding-left: 0.5rem;
+  padding-left: 0.9rem;
   line-height: 4rem;
 }
 
@@ -68,6 +79,7 @@ body {
   position: fixed;
   z-index: 999;
   width: 100%;
+  margin-bottom: 30rem !important;
 }
 
 .nav-toggle:focus ~ .nav-toggle-label {
@@ -221,7 +233,11 @@ body {
     transform: scale(1, 1);
   }
 }
-
+.ghost {
+  position: relative;
+  width: 100vw;
+  height: 20vh;
+}
 /*****************************
  *                           *
  *      End-NavBar           *
@@ -234,9 +250,127 @@ body {
  *                           *
  *************************** */
 
-.card-main-container {
-  margin-top: 10rem;
+.product-list-holder {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
+
+.card-main-container {
+  width: 40vw;
+  height: 40vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 2rem;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.products-container {
+  background: transparent;
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-left {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.product-left img {
+  width: 100%;
+  height: auto;
+}
+
+.product-center {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.product-center h2 {
+  margin: 0;
+  margin-top: -2rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.2rem;
+  color: var(--main-cool-blue-color);
+  text-transform: capitalize;
+}
+.product-center h2 span {
+  margin: 0;
+  margin-top: -2rem;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: #dd9e40;
+  text-transform: capitalize;
+}
+
+.product-add-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-transform: capitalize;
+}
+
+/**********************************
+*          Button Style           *
+***********************************/
+
+.btn-holder {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.5rem;
+}
+
+.btn-details,
+.btn-add-cart {
+  height: auto;
+  padding: 0.8rem;
+  background-color: var(--main-vivid-color);
+  color: var(--main-bg);
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0.5rem;
+}
+.in-cart {
+  background-color: var(--main-cool-green-color);
+  color: var(--main-bg);
+  height: auto;
+  padding: 0.8rem;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0.5rem;
+}
+
+.btn-details:hover,
+.btn-add-cart:hover {
+  color: #232f3e;
+  cursor: pointer;
+}
+
+/*****************************
+ *                           *
+ *   End-Products Page       *
+ *                           *
+ *************************** */
 
 /*****************************
  *                           *

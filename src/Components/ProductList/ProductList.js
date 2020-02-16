@@ -7,18 +7,16 @@ export default class ProductList extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="py-5">
-          <div className="container">
-            <Title name="Our" title="Products" />
-            <div className="row">
-              <ProductConsumer>
-                {value => {
-                  return value.products.map(product => {
-                    return <Product key={product.name} product={product} />;
-                  });
-                }}
-              </ProductConsumer>
-            </div>
+        <div className="product-list-container">
+          <Title name="Our" title="Products" />
+          <div className="product-list-holder">
+            <ProductConsumer>
+              {value => {
+                return value.products.map(product => {
+                  return <Product key={product.name} product={product} />;
+                });
+              }}
+            </ProductConsumer>
           </div>
         </div>
       </React.Fragment>

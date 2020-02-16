@@ -10,8 +10,35 @@ export default class Product extends Component {
     return (
       <ProductWrapper className="card-main-container">
         <div className="products-container">
-          <div className="product-img"></div>
-          <div className="product-footer"></div>
+          <div className="product-left">
+            <img src={img} alt={title} />
+          </div>
+          <div className="product-center">
+            <div>
+              <h2>
+                {title} <span>${price}</span>
+              </h2>
+            </div>
+            <div className="product-add-info">
+              <h4>Additional</h4>
+            </div>
+            <div className="btn-holder">
+              <NavLink to="/details">
+                <button className="btn-details">Details</button>
+              </NavLink>
+              <NavLink to="/home">
+                <button
+                  className={inCart ? "in-cart" : "btn-add-cart"}
+                  disabled={inCart ? true : false}
+                  onClick={() => {
+                    console.log("added to the cart");
+                  }}
+                >
+                  {inCart ? <p disabled>in cart</p> : <p>BUY</p>}
+                </button>
+              </NavLink>
+            </div>
+          </div>
         </div>
 
         {/* <div className="cards-container">
@@ -57,7 +84,7 @@ export default class Product extends Component {
               </NavLink>
             </div>
           </div>
-        </div> */}
+        </ProductWrapper> */}
       </ProductWrapper>
     );
   }
@@ -76,75 +103,75 @@ Product.propTypes = {
 };
 
 const ProductWrapper = styled.div`
-  .cards-container {
-    border: 1px solid var(--main-gray-color);
-    width: 20vw;
-    height: 60vh;
-    padding: 1rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center !important;
-  }
-  .card-footer-top,
-  .card-footer-bottom {
-    // border: solid 1px red;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center
-    margin-top: 1rem;
-  }
-  .card-footer-bottom {
-    width: 100%;
-    padding: 0.7rem;
-    background: gray;
-  }
+  // .cards-container {
+  //   border: 1px solid var(--main-gray-color);
+  //   width: 20vw;
+  //   height: 60vh;
+  //   padding: 1rem;
+  //   display: flex;
+  //   flex-direction: row;
+  //   flex-wrap: wrap;
+  //   justify-content: space-between;
+  //   align-items: center !important;
+  // }
+  // .card-footer-top,
+  // .card-footer-bottom {
+  //   // border: solid 1px red;
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-content: space-between;
+  //   align-items: center
+  //   margin-top: 1rem;
+  // }
+  // .card-footer-bottom {
+  //   width: 100%;
+  //   padding: 0.7rem;
+  //   background: gray;
+  // }
 
-  .card-footer-holder,
-  .card-img-holder {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
+  // .card-footer-holder,
+  // .card-img-holder {
+  //   width: 100%;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: space-between;
+  //   align-items: center;
+  //   flex-wrap: wrap;
+  // }
 
-  .card-img-holder img {
-    width: 20rem;
-    height: 300px;
-    transition: all 1s linear;
-  }
+  // .card-img-holder img {
+  //   width: 20rem;
+  //   height: 300px;
+  //   transition: all 1s linear;
+  // }
 
-  .btn-add-cart {
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 0;
-    color: var(--main-dark-gray);
-    background-color: transparent;
-    &:focus {
-      outline: none;
-    }    
-  }
-  
-  .btn-add-cart:hover {
-    cursor: pointer;
-    color: var(--main-vivid-color);   
-    border-radius: 4px;    
-  }
+  // .btn-add-cart {
+  //   padding: 0.5rem;
+  //   font-size: 1rem;
+  //   border: 0;
+  //   color: var(--main-dark-gray);
+  //   background-color: transparent;
+  //   &:focus {
+  //     outline: none;
+  //   }
+  // }
 
-  .product-name {
-    font-size: 1.2rem;
-    color: var(--main-dark-gray);
-    letter-spacing: 2px;
-  }
-  .product-price,
-  .product-price span {
-    font-size: 1.2rem;
-    color: var(--main-vivid-color);
-    margin-left: 0.5rem;
-    padding: 0.2rem;
-  }
+  // .btn-add-cart:hover {
+  //   cursor: pointer;
+  //   color: var(--main-vivid-color);
+  //   border-radius: 4px;
+  // }
+
+  // .product-name {
+  //   font-size: 1.2rem;
+  //   color: var(--main-dark-gray);
+  //   letter-spacing: 2px;
+  // }
+  // .product-price,
+  // .product-price span {
+  //   font-size: 1.2rem;
+  //   color: var(--main-vivid-color);
+  //   margin-left: 0.5rem;
+  //   padding: 0.2rem;
+  // }
 `;
