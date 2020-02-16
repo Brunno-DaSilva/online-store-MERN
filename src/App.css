@@ -14,7 +14,7 @@
 
 :root {
   --main-bg: #ffffff;
-  --main-dark-bg: #232f3e;
+  --main-dark-bg: #374455;
   --main-gray-color: #f9f9f9;
   --main-dark-gray: #9e9d9d;
   --main-vivid-color: #f0ad46; /*#fbb710*/
@@ -371,6 +371,64 @@ body {
  *   End-Products Page       *
  *                           *
  *************************** */
+
+/*****************************
+ *                           *
+ *      Details Page         *
+ *                           *
+ *************************** */
+
+.details-container {
+  width: 92vw;
+  height: 70vh;
+  margin: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+.details-right {
+  height: 70vh;
+  line-height: 2rem;
+  text-transform: capitalize;
+}
+.details-right h1 {
+  font-size: 2.3rem;
+  color: var(--main-cool-blue-color);
+}
+.details-right h1 span {
+  font-size: 2.3rem;
+  color: var(--main-dark-bg);
+}
+.details-right h4 {
+  margin-top: 1.5rem;
+  line-height: 2.2rem;
+  padding-left: 0.5rem;
+  letter-spacing: 1px;
+  color: var(--main-dark-bg);
+}
+.details-right h5 {
+  margin-top: 1.8rem;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  padding-left: 0.5rem;
+  letter-spacing: 1px;
+  color: var(--main-dark-bg);
+  border-left: 5px solid #76d3c9;
+}
+
+.details-right p {
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  letter-spacing: 1px;
+  color: var(--main-dark-bg);
+  text-transform: none;
+}
+
+/*****************************
+*                           *
+*    END-Details Page       *
+*                           *
+*************************** */
 
 /*****************************
  *                           *

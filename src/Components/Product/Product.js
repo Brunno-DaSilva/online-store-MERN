@@ -20,7 +20,8 @@ export default class Product extends Component {
               </h2>
             </div>
             <div className="product-add-info">
-              <h4>Additional</h4>
+              <h4></h4>
+              <h4></h4>
             </div>
             <div className="btn-holder">
               <NavLink to="/details">

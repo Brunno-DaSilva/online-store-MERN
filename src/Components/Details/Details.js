@@ -20,23 +20,21 @@ export default class Details extends Component {
           } = value.detailProduct[0];
 
           return (
-            <div className="container py-5">
-              {/* title */}
-              <div className="row">
-                <div className="col-10 mx-auto text-center text-slanted text-blue my-5">
-                  <h1>{title}</h1>
+            <div className="details-container">
+              {/* Left col */}
+              <div className="details-left">
+                <div className="">
+                  <img src={img} className="" alt={title} />
                 </div>
               </div>
-              {/* end of title */}
-              <div className="row">
-                <div className="col-10 mx-auto col-md-6 my-3">
-                  <img src={img} className="img-fluid" alt="" />
-                </div>
-                {/* prdoduct info */}
-                <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
-                  <h1>model : {title}</h1>
-                  <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
-                    made by : <span className="text-uppercase">{company}</span>
+              {/* Right col */}
+              <div className="details-right">
+                <div className="">
+                  <h1>
+                    model : <span>{title}</span>
+                  </h1>
+                  <h4 className="">
+                    made by : <span className="">{company}</span>
                   </h4>
                   <h4 className="text-blue">
                     <strong>
@@ -44,10 +42,9 @@ export default class Details extends Component {
                       {price}
                     </strong>
                   </h4>
-                  <p className="text-capitalize font-weight-bold mt-3 mb-0">
-                    some info about product :
-                  </p>
-                  <p className="text-muted lead">{info}</p>
+                  <h5 className="">About {title}:</h5>
+                  <p className="">{info}</p>
+
                   {/* buttons */}
                   <div>
                     <NavLink to="/home">
