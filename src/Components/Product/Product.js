@@ -22,9 +22,9 @@ export default class Product extends Component {
             <NavLink to="/details">
               <img src={img} className="" alt="UHum" />
             </NavLink>
-          </div> */}
-        {/*Card Footer*/}
-        {/* <div className="card-footer-holder">
+          </div>
+
+          <div className="card-footer-holder">
             <div className="card-footer-top">
               <p className="product-name"> {title}</p>
               <h5 className="product-price">
@@ -50,8 +50,8 @@ export default class Product extends Component {
                       Add to cart <i className="fab fa-opencart" />
                     </p>
                   )}
-                </button> */}
-        {/* </NavLink>
+                </button>
+              </NavLink>
               <NavLink to="/details">
                 <button className="btn-add-cart">Details</button>
               </NavLink>
