@@ -339,7 +339,7 @@ body {
 .btn-holder {
   display: flex;
   flex-direction: row;
-  margin-top: 1.5rem;
+  margin-top: 3.5rem !important;
 }
 
 .btn-details,
