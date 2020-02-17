@@ -41,51 +41,6 @@ export default class Product extends Component {
             </div>
           </div>
         </div>
-
-        {/* <div className="cards-container">
-          <div
-            className="card-img-holder image-container p-6"
-            onClick={() => console.log("Go to DETAILS")}
-          >
-            <NavLink to="/details">
-              <img src={img} className="" alt="UHum" />
-            </NavLink>
-          </div>
-
-          <div className="card-footer-holder">
-            <div className="card-footer-top">
-              <p className="product-name"> {title}</p>
-              <h5 className="product-price">
-                <span className="mr-1 fas fa-dollar-sign"></span>
-                {price}
-              </h5>
-            </div>
-            <div className="card-footer-bottom">
-              <NavLink to="/home">
-                <button
-                  className="btn-add-cart"
-                  disabled={inCart ? true : false}
-                  onClick={() => {
-                    console.log("added to the cart");
-                  }}
-                >
-                  {inCart ? (
-                    <p className="text-capitalize mb-0" disabled>
-                      in cart
-                    </p>
-                  ) : (
-                    <p>
-                      Add to cart <i className="fab fa-opencart" />
-                    </p>
-                  )}
-                </button>
-              </NavLink>
-              <NavLink to="/details">
-                <button className="btn-add-cart">Details</button>
-              </NavLink>
-            </div>
-          </div>
-        </ProductWrapper> */}
       </ProductWrapper>
     );
   }

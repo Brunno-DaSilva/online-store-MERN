@@ -10,6 +10,7 @@ export const ButtonContainer = styled.button`
   text-transform: uppercase;
   letter-spacing: 3px;
   margin: 0.5rem;
+  transition: 0.4s;
   &:hover {
     cursor: pointer;
     color: var(--main-cool-blue-color);

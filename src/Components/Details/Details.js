@@ -29,7 +29,7 @@ export default class Details extends Component {
               </div>
               {/* Right col */}
               <div className="details-right">
-                <div className="">
+                <div className="details-right-title">
                   <h1>
                     model : <span>{title}</span>
                   </h1>
@@ -37,10 +37,7 @@ export default class Details extends Component {
                     made by : <span className="">{company}</span>
                   </h4>
                   <h4 className="text-blue">
-                    <strong>
-                      price : <span>$</span>
-                      {price}
-                    </strong>
+                    price : <strong>$ {price}</strong>
                   </h4>
                   <h5 className="">About {title}:</h5>
                   <p className="">{info}</p>

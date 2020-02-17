@@ -34,12 +34,10 @@ export default class Navbar extends Component {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/cart" className="style-cart">
-                  <ButtonContainer>
-                    <span className="">
-                      <i className="fab fa-opencart" />
-                    </span>
-                  </ButtonContainer>
+                <NavLink to="/cart" className="style-cart ">
+                  <span className="">
+                    <i className="fab fa-opencart" />
+                  </span>
                 </NavLink>
               </li>
             </ul>

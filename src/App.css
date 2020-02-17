@@ -80,6 +80,7 @@ body {
   z-index: 999;
   width: 100%;
   margin-bottom: 30rem !important;
+  padding: 1rem;
 }
 
 .nav-toggle:focus ~ .nav-toggle-label {
@@ -166,12 +167,17 @@ body {
 }
 
 .style-cart {
+  font-size: 1.5rem;
   margin-left: 8rem;
   margin-right: -5rem;
+  padding: 0.6rem;
+  color: var(--main-vivid-color);
+  transition: 0.4s;
 }
-.style-cart {
-  margin-left: 8rem;
-  margin-right: -5rem;
+.style-cart:hover {
+  color: var(--main-cool-blue-color);
+  padding: 0.6rem;
+  transition: 250ms ease-in-out 250ms;
 }
 
 @media screen and (min-width: 800px) {
@@ -269,7 +275,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
   margin: 2rem;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); */
 }
 
 .products-container {
@@ -347,6 +353,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 3px;
   margin: 0.5rem;
+  transition: 0.4s;
 }
 .in-cart {
   background-color: var(--main-cool-green-color);
@@ -358,12 +365,14 @@ body {
   text-transform: uppercase;
   letter-spacing: 3px;
   margin: 0.5rem;
+  transition: 0.4s;
 }
-
+.in-cart:hover,
 .btn-details:hover,
 .btn-add-cart:hover {
-  color: #232f3e;
   cursor: pointer;
+  color: var(--main-cool-blue-color);
+  background: transparent;
 }
 
 /*****************************
@@ -396,7 +405,7 @@ body {
 }
 .details-right h1 span {
   font-size: 2.3rem;
-  color: var(--main-dark-bg);
+  color: var(--main-vivid-color);
 }
 .details-right h4 {
   margin-top: 1.5rem;
@@ -405,6 +414,14 @@ body {
   letter-spacing: 1px;
   color: var(--main-dark-bg);
 }
+.details-right h4 span {
+  color: var(--main-cool-blue-color);
+}
+.details-right h4 strong {
+  color: var(--main-cool-blue-color);
+  font-weight: bold !important;
+}
+
 .details-right h5 {
   margin-top: 1.8rem;
   font-size: 1.2rem;
