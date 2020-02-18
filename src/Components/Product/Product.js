@@ -46,7 +46,7 @@ export default class Product extends Component {
                     </div>
 
                     <div onClick={() => value.handleDetails(id)}>
-                      <NavLink to="/home">
+                      <NavLink to="/products">
                         <button
                           className={inCart ? "in-cart" : "btn-add-cart"}
                           disabled={inCart ? true : false}

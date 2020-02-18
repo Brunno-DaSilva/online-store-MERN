@@ -44,7 +44,7 @@ export default class Details extends Component {
 
                   {/* buttons */}
                   <div>
-                    <NavLink to="/home">
+                    <NavLink to="/products">
                       <ButtonContainer>back to products</ButtonContainer>
                     </NavLink>
                     <ButtonContainer

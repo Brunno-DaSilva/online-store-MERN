@@ -29,7 +29,7 @@ export default class Modal extends Component {
                       </p>
                     </div>
                     <div className="modal-footer">
-                      <NavLink to="/home">
+                      <NavLink to="/products">
                         <button
                           className="btn-details"
                           onClick={() => closeModal()}
