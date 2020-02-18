@@ -7,6 +7,7 @@ import Details from "./Components/Details/Details";
 import Modal from "./Components/Modal/Modal";
 import PageNotFound from "./Components/PageNotFound/PageNotFound";
 import UserLogin from "./config/UserLogin";
+import Home from "./Components/Home/Home";
 import "./App.css";
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
     <React.Fragment className="container">
       <Navbar></Navbar>
       <Switch>
-        <Route exact path="/home" component={ProductList}></Route>
+        <Route exact path="/home" component={Home}></Route>
+        <Route exact path="/products" component={ProductList}></Route>
         <Route path="/details" component={Details}></Route>
         <Route path="/cart" component={Cart}></Route>
         <Route path="/login" component={UserLogin} />
