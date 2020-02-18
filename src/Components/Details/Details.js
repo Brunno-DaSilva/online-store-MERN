@@ -17,7 +17,7 @@ export default class Details extends Component {
             price,
             title,
             inCart
-          } = value.detailProduct[0];
+          } = value.detailProduct;
 
           return (
             <div className="details-container">

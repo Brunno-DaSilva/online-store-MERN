@@ -8,7 +8,7 @@ export const storeProducts = [
     company: "GOOGLE",
     info:
       "Stay at the top of your game with this once in a life time product. NVIDIA G-SYNC technology eliminates screen tearing and stuttering for smooth gameplay, while the 178-degree viewing angle delivers crisp, bright pictures from almost any direction. This product has an ergonomic stand with tilt, swivel, and height adjustment settings for a customized setup, and the 4K resolution offers sharp visuals.",
-    inCart: true,
+    inCart: false,
     count: 0,
     total: 0,
     category: "smartPhones",

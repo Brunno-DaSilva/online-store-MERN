@@ -10,9 +10,20 @@ export default class Product extends Component {
     return (
       <ProductWrapper className="card-main-container">
         <div className="products-container">
-          <div className="product-left">
-            <img src={img} alt={title} />
-          </div>
+          <ProductConsumer>
+            {value => {
+              return (
+                <div
+                  className="product-left"
+                  onClick={() => value.handleDetails(id)}
+                >
+                  <NavLink to="/details">
+                    <img src={img} alt={title} />
+                  </NavLink>
+                </div>
+              );
+            }}
+          </ProductConsumer>
           <div className="product-center">
             <div>
               <h2>
@@ -23,22 +34,34 @@ export default class Product extends Component {
               <h4></h4>
               <h4></h4>
             </div>
-            <div className="btn-holder">
-              <NavLink to="/details">
-                <button className="btn-details">Details</button>
-              </NavLink>
-              <NavLink to="/home">
-                <button
-                  className={inCart ? "in-cart" : "btn-add-cart"}
-                  disabled={inCart ? true : false}
-                  onClick={() => {
-                    console.log("added to the cart");
-                  }}
-                >
-                  {inCart ? <p disabled>in cart</p> : <p>BUY</p>}
-                </button>
-              </NavLink>
-            </div>
+
+            <ProductConsumer>
+              {value => {
+                return (
+                  <div className="btn-holder">
+                    <div onClick={() => value.handleDetails(id)}>
+                      <NavLink to="/details">
+                        <button className="btn-details">Details</button>
+                      </NavLink>
+                    </div>
+
+                    <div onClick={() => value.handleDetails(id)}>
+                      <NavLink to="/home">
+                        <button
+                          className={inCart ? "in-cart" : "btn-add-cart"}
+                          disabled={inCart ? true : false}
+                          onClick={() => {
+                            console.log("added to the cart");
+                          }}
+                        >
+                          {inCart ? <p disabled>in cart</p> : <p>BUY</p>}
+                        </button>
+                      </NavLink>
+                    </div>
+                  </div>
+                );
+              }}
+            </ProductConsumer>
           </div>
         </div>
       </ProductWrapper>
