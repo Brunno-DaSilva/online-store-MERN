@@ -60,18 +60,18 @@ class ProductProvider extends Component {
     }, this.addTotals);
   };
 
-  // openModal = id => {
-  //   const product = this.getItem(id);
-  //   this.setState(() => {
-  //     return { modalProduct: product, modalOpen: true };
-  //   });
-  // };
+  openModal = id => {
+    const product = this.getItem(id);
+    this.setState(() => {
+      return { modalProduct: product, modalOpen: true };
+    });
+  };
 
-  // closeModal = () => {
-  //   this.setState(() => {
-  //     return { modalOpen: false };
-  //   });
-  // };
+  closeModal = () => {
+    this.setState(() => {
+      return { modalOpen: false };
+    });
+  };
 
   // increment = id => {
   //   let tempCart = [...this.state.cart];
@@ -141,7 +141,13 @@ class ProductProvider extends Component {
         value={{
           ...this.state,
           handleDetails: this.handleDetails,
-          addToCart: this.addToCart
+          addToCart: this.addToCart,
+          openModal: this.openModal,
+          closeModal: this.closeModal
+          // increment: this.increment,
+          // decrement: this.decrement,
+          // removeItem: this.removeItem,
+          // clearCart: this.clearCart
         }}
       >
         {this.props.children}

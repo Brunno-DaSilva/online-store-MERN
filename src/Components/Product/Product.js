@@ -51,7 +51,8 @@ export default class Product extends Component {
                           className={inCart ? "in-cart" : "btn-add-cart"}
                           disabled={inCart ? true : false}
                           onClick={() => {
-                            console.log("added to the cart");
+                            value.addToCart(id);
+                            value.openModal(id);
                           }}
                         >
                           {inCart ? <p disabled>in cart</p> : <p>BUY</p>}

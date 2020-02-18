@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import ProductList from "./Components/ProductList/ProductList";
 import Cart from "./Components/Cart/Cart";
 import Details from "./Components/Details/Details";
+import Modal from "./Components/Modal/Modal";
 import PageNotFound from "./Components/PageNotFound/PageNotFound";
 import "./App.css";
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/cart" component={Cart}></Route>
         <Route component={PageNotFound} />
       </Switch>
+      <Modal />
     </React.Fragment>
   );
 }
