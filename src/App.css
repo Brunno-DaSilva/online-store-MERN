@@ -346,6 +346,7 @@ body {
 .btn-add-cart {
   height: auto;
   padding: 0.8rem;
+  border: 1px solid var(--main-vivid-color);
   background-color: var(--main-vivid-color);
   color: var(--main-bg);
   font-size: 1rem;
@@ -357,6 +358,7 @@ body {
 }
 .in-cart {
   background-color: var(--main-cool-green-color);
+  border: 1px solid var(--main-cool-green-color);  
   color: var(--main-bg);
   height: auto;
   padding: 0.8rem;
@@ -372,6 +374,7 @@ body {
 .btn-add-cart:hover {
   cursor: pointer;
   color: var(--main-cool-blue-color);
+  border: 1px solid var(--main-cool-blue-color);
   background: transparent;
 }
 
@@ -388,15 +391,19 @@ body {
  *************************** */
 
 .details-container {
-  width: 92vw;
+  width: 90vw;
   height: 70vh;
   margin: 2rem;
+  padding: 1rem;
   display: flex;
   flex-direction: row;
+align-content: center;
+  align-items: flex-start;
 }
 .details-right {
   height: 70vh;
   line-height: 2rem;
+  padding: 1rem;
   text-transform: capitalize;
 }
 .details-right h1 {
