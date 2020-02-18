@@ -24,20 +24,27 @@ export default class Navbar extends Component {
                 </NavLink>
               </li>
               <li className="">
-                <NavLink to="/about" className="style-links">
-                  About
-                </NavLink>
-              </li>
-              <li className="">
                 <NavLink to="/home" className="style-links">
                   Products
                 </NavLink>
               </li>
+              <li className="">
+                <NavLink to="/about" className="style-links">
+                  About
+                </NavLink>
+              </li>
+
               <li>
                 <NavLink to="/cart" className="style-cart ">
                   <span className="">
                     <i className="fab fa-opencart" />
                   </span>
+                </NavLink>
+              </li>
+              <li className="user-login">
+                <NavLink to="/login" className="style-links">
+                  Login
+                  <i className="fas fa-user" />
                 </NavLink>
               </li>
             </ul>

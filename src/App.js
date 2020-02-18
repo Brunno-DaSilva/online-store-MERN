@@ -6,7 +6,7 @@ import Cart from "./Components/Cart/Cart";
 import Details from "./Components/Details/Details";
 import Modal from "./Components/Modal/Modal";
 import PageNotFound from "./Components/PageNotFound/PageNotFound";
-import UserLogin from "./config/UserLogin"
+import UserLogin from "./config/UserLogin";
 import "./App.css";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         <Route exact path="/home" component={ProductList}></Route>
         <Route path="/details" component={Details}></Route>
         <Route path="/cart" component={Cart}></Route>
-        <Route component={UserLogin} />
+        <Route path="/login" component={UserLogin} />
         <Route component={PageNotFound} />
       </Switch>
       <Modal />
