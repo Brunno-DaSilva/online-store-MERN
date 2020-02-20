@@ -2,8 +2,13 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../logo.png";
 import { ButtonContainer } from "../StyleComponents/Button";
+import fire from "../../config/Firebase";
 
 export default class Navbar extends Component {
+  logout() {
+    fire.auth().signOut();
+  }
+
   render() {
     return (
       <header>
@@ -44,7 +49,11 @@ export default class Navbar extends Component {
               <li className="user-login">
                 <NavLink to="/login" className="style-links">
                   Login
-                  <i className="fas fa-user" />
+                </NavLink>
+              </li>
+              <li className="user-signup">
+                <NavLink to="/signup" className="style-links">
+                  Signup
                 </NavLink>
               </li>
             </ul>

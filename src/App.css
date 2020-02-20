@@ -498,7 +498,7 @@ form {
   width: 40vw;
   min-height: 50vh;
   background-color: #374455a8;
-  margin-top: 5rem;
+  margin-top: 4rem;
   padding: 1.5rem;
   margin-left: 11rem;
 }
@@ -512,9 +512,9 @@ form {
 
 .form-group label {
   color: #ffffff;
-  font-size: 1.7rem;
-  margin-bottom: 2rem;
-  margin-top: 1.3rem;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
 }
 .form-group label::after {
   content: "";
@@ -528,10 +528,11 @@ form {
 }
 
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="text"] {
   border: none;
   width: 100%;
-  padding: 12px 20px;
+  padding: 6px 10px;
   margin: 8px 0;
   font-size: 1.2rem;
   background-color: var(--main-bg);

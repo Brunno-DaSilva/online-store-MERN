@@ -1,20 +1,14 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import Firebase from "./Firebase";
+import fire from "./Firebase";
 import loginImg from "./login-img.png";
 import logoTypeImg from "./logotypewhite.png";
 
 class UserLogin extends Component {
-  constructor(props) {
-    super(props);
-    this.login = this.login.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.signup = this.signup.bind(this);
-    this.state = {
-      email: "",
-      password: ""
-    };
-  }
+  state = {
+    email: "",
+    password: ""
+  };
 
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
@@ -22,7 +16,8 @@ class UserLogin extends Component {
 
   login(e) {
     e.preventDefault();
-    Firebase.auth()
+    fire
+      .auth()
       .signInWithEmailAndPassword(this.state.email, this.state.password)
       .then(u => {})
       .catch(error => {
@@ -30,18 +25,6 @@ class UserLogin extends Component {
       });
   }
 
-  signup(e) {
-    e.preventDefault();
-    Firebase.auth()
-      .createUserWithEmailAndPassword(this.state.email, this.state.password)
-      .then(u => {})
-      .then(u => {
-        console.log(u);
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  }
   render() {
     return (
       <div className="user-login-container">
@@ -78,20 +61,21 @@ class UserLogin extends Component {
               />
             </div>
             <div className="btn-holder">
-              <button
-                type="submit"
-                onClick={this.login}
-                className="btn-details"
-              >
-                Login
-              </button>
-              <button
-                onClick={this.signup}
-                style={{ marginLeft: "25px" }}
-                className="btn-details"
-              >
-                Signup
-              </button>
+              <NavLink to="/home">
+                <button
+                  type="submit"
+                  onClick={this.login}
+                  className="btn-details"
+                >
+                  Login
+                </button>
+              </NavLink>
+
+              <NavLink to="/signup">
+                <button style={{ marginLeft: "25px" }} className="btn-details">
+                  Signup
+                </button>
+              </NavLink>
             </div>
           </form>
         </div>
