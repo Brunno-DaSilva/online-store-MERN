@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { ProductConsumer } from "../../ContextApi";
+import Title from "../Title/Title";
 import { NavLink } from "react-router-dom";
 import { ButtonContainer } from "../StyleComponents/Button";
 
@@ -13,7 +14,7 @@ export default class Home extends Component {
 
           return (
             <div className="details-container">
-              <h1>Home welcome</h1>
+              <Title name="Welcome" title="TechFy"></Title>
             </div>
           );
         }}

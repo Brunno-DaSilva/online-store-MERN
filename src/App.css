@@ -566,6 +566,66 @@ input[type="password"]:focus {
 
 /*****************************
  *                           *
+ *     Cart Column Style     *
+ *                           *
+ *************************** */
+
+.cart-columns-container {
+  width: 95vw;
+  min-height: 50vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--main-vivid-color);
+}
+
+/*****************************
+ *                           *
+ *     END - Cart Column     *
+ *                           *
+ *************************** */
+
+/*****************************
+ *                           *
+ *       Cart IS Empty       *
+ *                           *
+ *************************** */
+
+.cart-is-empty {
+  width: 95vw;
+  min-height: 50vh;
+  margin: auto;
+  position: absolute;
+  overflow: hidden !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart-is-empty-title h3 {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--main-cool-blue-color);
+}
+
+.cart-is-empty-img {
+  width: 38vw;
+}
+
+.cart-is-empty-img img {
+  width: 100%;
+  height: auto;
+}
+
+/*****************************
+ *                           *
+ *   END - Cart IS Empty     *
+ *                           *
+ *************************** */
+
+/*****************************
+ *                           *
  *       Media Query         *
  *                           *
  *************************** */
