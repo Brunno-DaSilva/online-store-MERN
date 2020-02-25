@@ -8,11 +8,11 @@ class ProductProvider extends Component {
   state = {
     products: [],
     detailProduct: detailProduct,
-    cart: detailProduct,
+    cart: [],
     modalOpen: false,
     modalProduct: detailProduct,
     cartSubTotal: 0,
-    cartTax: 0,
+    productTax: 0,
     cartTotal: 0
   };
 
@@ -110,7 +110,7 @@ class ProductProvider extends Component {
   getTotals = () => {
     let subTotal = 0;
     this.state.cart.map(item => (subTotal += item.total));
-    const tempTax = subTotal * 0.1;
+    const tempTax = subTotal * 0.08;
     const tax = parseFloat(tempTax.toFixed(2));
     const total = subTotal + tax;
     return {
@@ -125,12 +125,46 @@ class ProductProvider extends Component {
       () => {
         return {
           cartSubTotal: totals.subTotal,
-          cartTax: totals.tax,
+          productTax: totals.tax,
           cartTotal: totals.total
         };
       },
       () => {
         // console.log(this.state);
+      }
+    );
+  };
+
+  removeItem = id => {
+    let tempProducts = [...this.state.products];
+    let tempCart = [...this.state.cart];
+
+    const index = tempProducts.indexOf(this.getItem(id));
+    let removedProduct = tempProducts[index];
+    removedProduct.inCart = false;
+    removedProduct.count = 0;
+    removedProduct.total = 0;
+
+    tempCart = tempCart.filter(item => {
+      return item.id !== id;
+    });
+
+    this.setState(() => {
+      return {
+        cart: [...tempCart],
+        products: [...tempProducts]
+      };
+    }, this.addTotals);
+  };
+
+  clearItems = () => {
+    this.setState(
+      () => {
+        return { cart: [] };
+      },
+      () => {
+        this.setProducts();
+        this.addTotals();
       }
     );
   };
@@ -147,7 +181,7 @@ class ProductProvider extends Component {
           increment: this.increment,
           decrement: this.decrement,
           removeItem: this.removeItem,
-          clearCart: this.clearCart
+          clearItems: this.clearItems
         }}
       >
         {this.props.children}

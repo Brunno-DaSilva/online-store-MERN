@@ -14,7 +14,7 @@ export default class Home extends Component {
 
           return (
             <div className="details-container">
-              <Title name="Welcome" title="TechFy"></Title>
+              <Title name="Welcome to" title="TechFy"></Title>
             </div>
           );
         }}

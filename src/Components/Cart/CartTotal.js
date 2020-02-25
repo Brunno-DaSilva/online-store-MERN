@@ -1,8 +1,9 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import logoImage from "./logotypewhite.png";
 
 export default function CartTotal({ value }) {
-  const { cartSubtotal, productTax, cartTotal, clearItems } = value;
+  const { cartSubTotal, productTax, cartTotal, clearItems } = value;
   return (
     <div className="cart-total-container">
       <div className="cart-total">
@@ -11,19 +12,50 @@ export default function CartTotal({ value }) {
         </div>
 
         <div className="cart-total-items">
-          <p>
-            Subtotal: <span>{cartSubtotal}</span>
-          </p>
+          <table className="cart-total-table">
+            <tr>
+              <th></th>
+              <th></th>
+            </tr>
+            <tr>
+              <td>Subtotal: </td>
+              <td>
+                <span>$ {cartSubTotal}</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Product Tax: </td>
+              <td>
+                <span>$ {productTax}</span>
+              </td>
+            </tr>
+            <tr>
+              <td> Total: </td>
+              <td>
+                <span className="total-price">$ {cartTotal}</span>
+              </td>
+            </tr>
+          </table>
         </div>
-        <div className="cart-total-items">
-          <p>
-            Product Tax: <span>{productTax}</span>
-          </p>
-        </div>
-        <div className="cart-total-items">
-          <p>
-            Total: <span>{cartTotal}</span>
-          </p>
+
+        <div className="btn-holder">
+          <div>
+            <NavLink to="/products">
+              <button
+                onClick={() => {
+                  clearItems();
+                }}
+                type="button"
+                className="btn-details"
+              >
+                Clear Cart
+              </button>
+            </NavLink>
+          </div>
+
+          <div>
+            <button className="btn-details">Buy Now</button>
+          </div>
         </div>
       </div>
     </div>

@@ -609,6 +609,12 @@ input[type="password"]:focus {
   align-items: center;
 }
 
+.cart-is-empty-title {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+
 .cart-is-empty-title h4 {
   padding: 0.5rem;
   font-size: 1.5rem;
@@ -708,8 +714,8 @@ input[type="password"]:focus {
 }
 
 .cart-total {
-  width: 30vw;
-  padding: 2rem;
+  width: 30.5vw;
+  padding: 1rem;
   padding-right: 3rem;
   background-color: #374455e7;
   display: flex;
@@ -734,16 +740,23 @@ input[type="password"]:focus {
 
 .cart-total-items {
   padding-top: 1rem;
+  text-align: right;
 }
-
-.cart-total p {
+.cart-total-table {
+  width: 100%;
+  text-align: left;
+}
+.cart-total-table tr td {
   font-size: 1rem;
   line-height: 2rem;
   color: var(--main-bg);
 }
-.cart-total p span {
-  font-size: 1.2rem;
-  line-height: 2rem;
+.cart-total-table tr td span {
+  margin-left: 2rem;
+}
+
+.total-price {
+  color: #f7b85b;
 }
 
 /*****************************
@@ -751,6 +764,79 @@ input[type="password"]:focus {
  *   END - Cart Total price  *
  *                           *
  *************************** */
+
+/*****************************
+ *                           *
+ *   404 Page-not-found      *
+ *                           *
+ *************************** */
+.pageNotFound-container {
+  width: 95vw;
+  margin: auto;
+  margin-top: -5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 999;
+}
+
+.pageNotFound-container h1 {
+  font-size: 30rem;
+  color: #455366;
+}
+
+.pageNotFound-img {
+  width: 35vw;
+  height: 65vh;
+  border-radius: 60%;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ebf2f7;
+}
+
+.pageNotFound-img:hover {
+  -moz-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+  background-color: #ced5da;
+}
+
+.pageNotFound-img img {
+  width: 40%;
+  height: auto;
+  margin: auto;
+}
+
+.bottom-color {
+  position: absolute;
+  top: 50vh;
+  left: auto;
+  width: 100vw;
+  height: 50vh;
+  background-color: #fad7a3;
+  z-index: -5;
+}
+
+.top-color {
+  background-color: #f7cb89;
+  position: absolute;
+  top: 10vh;
+  left: auto;
+  width: 100vw;
+  height: 50vh;
+  z-index: -5;
+}
+/*****************************
+ *                           *
+ * END - 404 Page-not-found  *
+ *                           *
+ *************************** */
+
 /*****************************
  *                           *
  *       Media Query         *
