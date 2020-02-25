@@ -647,6 +647,7 @@ input[type="password"]:focus {
 
 .cart-items-container h4 i:hover {
   color: var(--main-vivid-color);
+  cursor: pointer;
 }
 
 .cart-item-space {
@@ -691,6 +692,65 @@ input[type="password"]:focus {
  *                           *
  *************************** */
 
+/*****************************
+ *                           *
+ *    Cart Total price       *
+ *                           *
+ *************************** */
+
+.cart-total-container {
+  width: 95vw;
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.cart-total {
+  width: 30vw;
+  padding: 2rem;
+  padding-right: 3rem;
+  background-color: #374455e7;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.cart-total-img {
+  margin: auto;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cart-total-img img {
+  width: 8vw;
+  height: auto;
+}
+
+.cart-total-items {
+  padding-top: 1rem;
+}
+
+.cart-total p {
+  font-size: 1rem;
+  line-height: 2rem;
+  color: var(--main-bg);
+}
+.cart-total p span {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+/*****************************
+ *                           *
+ *   END - Cart Total price  *
+ *                           *
+ *************************** */
 /*****************************
  *                           *
  *       Media Query         *

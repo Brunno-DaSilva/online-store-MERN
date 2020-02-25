@@ -41,7 +41,7 @@ export default function CartItem({ item, value }) {
 
       <div className="cart-item-space cart-item-total">
         <h4>
-          Cart total: <span>$ {total}</span>
+          Total: <span>$ {total}</span>
         </h4>
       </div>
     </div>
