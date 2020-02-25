@@ -10,11 +10,15 @@ export default function CartItem({ item, value }) {
       </div>
 
       <div className="cart-item-space">
-        <h4>Product: {title}</h4>
+        <h4>
+          Product: <span>{title}</span>
+        </h4>
       </div>
 
       <div className="cart-item-space">
-        <h4> Price: $ {price}</h4>
+        <h4>
+          Price: <span>$ {price}</span>
+        </h4>
       </div>
       <div className="cart-item-space cart-item-btn">
         <div onClick={() => increment(id)} className="mais">
@@ -28,6 +32,13 @@ export default function CartItem({ item, value }) {
           <i className="fas fa-minus"></i>
         </div>
       </div>
+
+      <div onClick={() => removeItem(id)} className="cart-item-space">
+        <h4>
+          <i class="far fa-trash-alt"></i>
+        </h4>
+      </div>
+
       <div className="cart-item-space cart-item-total">
         <h4>
           Cart total: <span>$ {total}</span>
