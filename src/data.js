@@ -1,71 +1,11 @@
 export const storeProducts = [
   {
     id: 1,
-    title: "Google Pixel - Black",
+    title: "Galaxy A50",
     img:
-      "https://res.cloudinary.com/duprwuo4j/image/upload/v1581284561/imgs_starwars/EcommerceProject/product-1_tyghde.png",
+      "https://res.cloudinary.com/duprwuo4j/image/upload/v1582603045/imgs_starwars/EcommerceProject/SAMSUNGa50_swnxeh.png",
     price: 300,
-    company: "GOOGLE",
-    info:
-      "Stay at the top of your game with this once in a life time product. NVIDIA G-SYNC technology eliminates screen tearing and stuttering for smooth gameplay, while the 178-degree viewing angle delivers crisp, bright pictures from almost any direction. This product has an ergonomic stand with tilt, swivel, and height adjustment settings for a customized setup, and the 4K resolution offers sharp visuals.",
-    inCart: false,
-    count: 0,
-    total: 0,
-    category: "smartPhones",
-    date: "12/29/2019"
-  },
-  {
-    id: 2,
-    title: "Samsung S7",
-    img:
-      "https://res.cloudinary.com/duprwuo4j/image/upload/v1581284561/imgs_starwars/EcommerceProject/product-2_xizrrw.png",
-    price: 600,
-    company: "SAMSUNG",
-    info:
-      "Stay at the top of your game with this once in a life time product. NVIDIA G-SYNC technology eliminates screen tearing and stuttering for smooth gameplay, while the 178-degree viewing angle delivers crisp, bright pictures from almost any direction. This product has an ergonomic stand with tilt, swivel, and height adjustment settings for a customized setup, and the 4K resolution offers sharp visuals.",
-    inCart: false,
-    count: 0,
-    total: 0,
-    category: "smartPhones",
-    date: "12/29/2019"
-  },
-  {
-    id: 3,
-    title: "HTC 10 - Black",
-    img:
-      "https://res.cloudinary.com/duprwuo4j/image/upload/v1581284564/imgs_starwars/EcommerceProject/product-3_ak2dhz.png",
-    price: 809,
-    company: "htc",
-    info:
-      "Stay at the top of your game with this once in a life time product. NVIDIA G-SYNC technology eliminates screen tearing and stuttering for smooth gameplay, while the 178-degree viewing angle delivers crisp, bright pictures from almost any direction. This product has an ergonomic stand with tilt, swivel, and height adjustment settings for a customized setup, and the 4K resolution offers sharp visuals.",
-    inCart: false,
-    count: 0,
-    total: 0,
-    category: "smartPhones",
-    date: "12/29/2019"
-  },
-  {
-    id: 4,
-    title: "HTC 10 - White",
-    img:
-      "https://res.cloudinary.com/duprwuo4j/image/upload/v1581284563/imgs_starwars/EcommerceProject/product-4_zwnwym.png",
-    price: 508,
-    company: "htc",
-    info:
-      "Stay at the top of your game with this once in a life time product. NVIDIA G-SYNC technology eliminates screen tearing and stuttering for smooth gameplay, while the 178-degree viewing angle delivers crisp, bright pictures from almost any direction. This product has an ergonomic stand with tilt, swivel, and height adjustment settings for a customized setup, and the 4K resolution offers sharp visuals.",
-    inCart: false,
-    count: 0,
-    total: 0,
-    category: "smartPhones",
-    date: "12/29/2019"
-  },
-  {
-    id: 5,
-    title: "HTC Desire 626s",
-    img:
-      "https://res.cloudinary.com/duprwuo4j/image/upload/v1581284561/imgs_starwars/EcommerceProject/product-5_xrvazv.png",
-    price: 554,
-    company: "htc",
+    company: "Samsung",
     info:
       "Stay at the top of your game with this once in a life time product. NVIDIA G-SYNC technology eliminates screen tearing and stuttering for smooth gameplay, while the 178-degree viewing angle delivers crisp, bright pictures from almost any direction. This product has an ergonomic stand with tilt, swivel, and height adjustment settings for a customized setup, and the 4K resolution offers sharp visuals.",
     inCart: false,
@@ -76,11 +16,71 @@ export const storeProducts = [
   },
   {
     id: 6,
-    title: "Vintage Iphone",
+    title: "Galaxy Note 10+",
     img:
-      "https://res.cloudinary.com/duprwuo4j/image/upload/v1581284564/imgs_starwars/EcommerceProject/product-6_fedmkk.png",
+      "https://res.cloudinary.com/duprwuo4j/image/upload/v1582602667/imgs_starwars/EcommerceProject/SAMSUNGNOTE10_jbvxjr.png",
     price: 100,
-    company: "apple",
+    company: "Samsung",
+    info:
+      "Stay at the top of your game with this once in a life time product. NVIDIA G-SYNC technology eliminates screen tearing and stuttering for smooth gameplay, while the 178-degree viewing angle delivers crisp, bright pictures from almost any direction. This product has an ergonomic stand with tilt, swivel, and height adjustment settings for a customized setup, and the 4K resolution offers sharp visuals.",
+    inCart: false,
+    count: 0,
+    total: 0,
+    category: "smartPhones",
+    date: "12/29/2019"
+  },
+  {
+    id: 3,
+    title: "Moto One",
+    img:
+      "https://res.cloudinary.com/duprwuo4j/image/upload/v1582602953/imgs_starwars/EcommerceProject/MOTOROLA_o4ybcb.png",
+    price: 809,
+    company: "Motorola",
+    info:
+      "Stay at the top of your game with this once in a life time product. NVIDIA G-SYNC technology eliminates screen tearing and stuttering for smooth gameplay, while the 178-degree viewing angle delivers crisp, bright pictures from almost any direction. This product has an ergonomic stand with tilt, swivel, and height adjustment settings for a customized setup, and the 4K resolution offers sharp visuals.",
+    inCart: false,
+    count: 0,
+    total: 0,
+    category: "smartPhones",
+    date: "12/29/2019"
+  },
+  {
+    id: 4,
+    title: "Nokia - 9 PureView",
+    img:
+      "https://res.cloudinary.com/duprwuo4j/image/upload/v1582602878/imgs_starwars/EcommerceProject/NOKIAPHONE_w0soxn.png",
+    price: 508,
+    company: "Nokia",
+    info:
+      "Stay at the top of your game with this once in a life time product. NVIDIA G-SYNC technology eliminates screen tearing and stuttering for smooth gameplay, while the 178-degree viewing angle delivers crisp, bright pictures from almost any direction. This product has an ergonomic stand with tilt, swivel, and height adjustment settings for a customized setup, and the 4K resolution offers sharp visuals.",
+    inCart: false,
+    count: 0,
+    total: 0,
+    category: "smartPhones",
+    date: "12/29/2019"
+  },
+  {
+    id: 5,
+    title: "Pixel 4 XL",
+    img:
+      "https://res.cloudinary.com/duprwuo4j/image/upload/v1582602755/imgs_starwars/EcommerceProject/GOOGLEPIXEL4_vi2kjv.png",
+    price: 650,
+    company: "Google",
+    info:
+      "Stay at the top of your game with this once in a life time product. NVIDIA G-SYNC technology eliminates screen tearing and stuttering for smooth gameplay, while the 178-degree viewing angle delivers crisp, bright pictures from almost any direction. This product has an ergonomic stand with tilt, swivel, and height adjustment settings for a customized setup, and the 4K resolution offers sharp visuals.",
+    inCart: false,
+    count: 0,
+    total: 0,
+    category: "smartPhones",
+    date: "12/29/2019"
+  },
+  {
+    id: 2,
+    title: "G8X ThinQ",
+    img:
+      "https://res.cloudinary.com/duprwuo4j/image/upload/v1582602584/imgs_starwars/EcommerceProject/LGDUAL_dpmhmw.png",
+    price: 600,
+    company: "LG",
     info:
       "Stay at the top of your game with this once in a life time product. NVIDIA G-SYNC technology eliminates screen tearing and stuttering for smooth gameplay, while the 178-degree viewing angle delivers crisp, bright pictures from almost any direction. This product has an ergonomic stand with tilt, swivel, and height adjustment settings for a customized setup, and the 4K resolution offers sharp visuals.",
     inCart: false,
@@ -91,9 +91,9 @@ export const storeProducts = [
   },
   {
     id: 7,
-    title: "Iphone 7",
+    title: "iPhone 8",
     img:
-      "https://res.cloudinary.com/duprwuo4j/image/upload/v1581284562/imgs_starwars/EcommerceProject/product-7_gyzxo0.png",
+      "https://res.cloudinary.com/duprwuo4j/image/upload/v1582603136/imgs_starwars/EcommerceProject/iphone8white_xiu8fl.png",
     price: 399,
     company: "apple",
     info:
@@ -106,7 +106,7 @@ export const storeProducts = [
   },
   {
     id: 8,
-    title: "Iphone 10",
+    title: "iPhone 10",
     img:
       "https://res.cloudinary.com/duprwuo4j/image/upload/v1581284570/imgs_starwars/EcommerceProject/iPhone10_muhe0f.png",
     price: 499,
@@ -121,7 +121,7 @@ export const storeProducts = [
   },
   {
     id: 9,
-    title: "Iphone 11",
+    title: "iPhone 11",
     img:
       "https://res.cloudinary.com/duprwuo4j/image/upload/v1581284572/imgs_starwars/EcommerceProject/iPhone11_cjko3v.png",
     price: 1099,
@@ -342,6 +342,126 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "monitors",
+    date: "12/29/2019"
+  },
+  {
+    id: 24,
+    title: "Beats Studio Wireless Gray",
+    img:
+      "https://res.cloudinary.com/duprwuo4j/image/upload/v1582603447/imgs_starwars/EcommerceProject/beatsGray_wlkdox.png",
+    price: 349,
+    company: "Beats by Dr. Dre",
+    info:
+      "Stay at the top of your game with this once in a life time product. NVIDIA G-SYNC technology eliminates screen tearing and stuttering for smooth gameplay, while the 178-degree viewing angle delivers crisp, bright pictures from almost any direction. This product has an ergonomic stand with tilt, swivel, and height adjustment settings for a customized setup, and the 4K resolution offers sharp visuals.",
+    inCart: false,
+    count: 0,
+    total: 0,
+    category: "headphones",
+    date: "12/29/2019"
+  },
+  {
+    id: 25,
+    title: "Beats Studio Wireless White",
+    img:
+      "https://res.cloudinary.com/duprwuo4j/image/upload/v1582603463/imgs_starwars/EcommerceProject/beatsWhite_hzixmw.png",
+    price: 349,
+    company: "Beats by Dr. Dre",
+    info:
+      "Stay at the top of your game with this once in a life time product. NVIDIA G-SYNC technology eliminates screen tearing and stuttering for smooth gameplay, while the 178-degree viewing angle delivers crisp, bright pictures from almost any direction. This product has an ergonomic stand with tilt, swivel, and height adjustment settings for a customized setup, and the 4K resolution offers sharp visuals.",
+    inCart: false,
+    count: 0,
+    total: 0,
+    category: "headphones",
+    date: "12/29/2019"
+  },
+  {
+    id: 26,
+    title: "Beats Studio Wireless Red",
+    img:
+      "https://res.cloudinary.com/duprwuo4j/image/upload/v1582603589/imgs_starwars/EcommerceProject/beatsRed_ocuhko.png",
+    price: 349,
+    company: "Beats by Dr. Dre",
+    info:
+      "Stay at the top of your game with this once in a life time product. NVIDIA G-SYNC technology eliminates screen tearing and stuttering for smooth gameplay, while the 178-degree viewing angle delivers crisp, bright pictures from almost any direction. This product has an ergonomic stand with tilt, swivel, and height adjustment settings for a customized setup, and the 4K resolution offers sharp visuals.",
+    inCart: false,
+    count: 0,
+    total: 0,
+    category: "headphones",
+    date: "12/29/2019"
+  },
+  {
+    id: 27,
+    title: "Noise Cancelling 700 Black",
+    img:
+      "https://res.cloudinary.com/duprwuo4j/image/upload/v1582603745/imgs_starwars/EcommerceProject/boseBlack_ntuzax.png",
+    price: 399,
+    company: "Bose",
+    info:
+      "Stay at the top of your game with this once in a life time product. NVIDIA G-SYNC technology eliminates screen tearing and stuttering for smooth gameplay, while the 178-degree viewing angle delivers crisp, bright pictures from almost any direction. This product has an ergonomic stand with tilt, swivel, and height adjustment settings for a customized setup, and the 4K resolution offers sharp visuals.",
+    inCart: false,
+    count: 0,
+    total: 0,
+    category: "headphones",
+    date: "12/29/2019"
+  },
+  {
+    id: 28,
+    title: "Noise Cancelling 700 White",
+    img:
+      "https://res.cloudinary.com/duprwuo4j/image/upload/v1582603833/imgs_starwars/EcommerceProject/bosewhite_qbpust.png",
+    price: 399,
+    company: "Bose",
+    info:
+      "Stay at the top of your game with this once in a life time product. NVIDIA G-SYNC technology eliminates screen tearing and stuttering for smooth gameplay, while the 178-degree viewing angle delivers crisp, bright pictures from almost any direction. This product has an ergonomic stand with tilt, swivel, and height adjustment settings for a customized setup, and the 4K resolution offers sharp visuals.",
+    inCart: false,
+    count: 0,
+    total: 0,
+    category: "headphones",
+    date: "12/29/2019"
+  },
+  {
+    id: 29,
+    title: "AirPods Pro - White",
+    img:
+      "https://res.cloudinary.com/duprwuo4j/image/upload/v1582604109/imgs_starwars/EcommerceProject/airpodes_ejhpad.png",
+    price: 249,
+    company: "Apple",
+    info:
+      "Stay at the top of your game with this once in a life time product. NVIDIA G-SYNC technology eliminates screen tearing and stuttering for smooth gameplay, while the 178-degree viewing angle delivers crisp, bright pictures from almost any direction. This product has an ergonomic stand with tilt, swivel, and height adjustment settings for a customized setup, and the 4K resolution offers sharp visuals.",
+    inCart: false,
+    count: 0,
+    total: 0,
+    category: "headphones",
+    date: "12/29/2019"
+  },
+  {
+    id: 30,
+    title: "Powerbeats Pro Navy",
+    img:
+      "https://res.cloudinary.com/duprwuo4j/image/upload/v1582604192/imgs_starwars/EcommerceProject/powerbeats_vb6t96.png",
+    price: 249,
+    company: "Beats by Dr. Dre",
+    info:
+      "Stay at the top of your game with this once in a life time product. NVIDIA G-SYNC technology eliminates screen tearing and stuttering for smooth gameplay, while the 178-degree viewing angle delivers crisp, bright pictures from almost any direction. This product has an ergonomic stand with tilt, swivel, and height adjustment settings for a customized setup, and the 4K resolution offers sharp visuals.",
+    inCart: false,
+    count: 0,
+    total: 0,
+    category: "headphones",
+    date: "12/29/2019"
+  },
+  {
+    id: 31,
+    title: "DynaTAC 8000X",
+    img:
+      "https://res.cloudinary.com/duprwuo4j/image/upload/v1582604408/imgs_starwars/EcommerceProject/firstcellphone_wjlvle.png",
+    price: 3995,
+    company: "Motorola",
+    info:
+      "Stay at the top of your game with this once in a life time product. NVIDIA G-SYNC technology eliminates screen tearing and stuttering for smooth gameplay, while the 178-degree viewing angle delivers crisp, bright pictures from almost any direction. This product has an ergonomic stand with tilt, swivel, and height adjustment settings for a customized setup, and the 4K resolution offers sharp visuals.",
+    inCart: false,
+    count: 0,
+    total: 0,
+    category: "headphones",
     date: "12/29/2019"
   }
 ];
