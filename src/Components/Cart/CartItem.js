@@ -10,26 +10,28 @@ export default function CartItem({ item, value }) {
       </div>
 
       <div className="cart-item-space">
-        <h4>{title}</h4>
+        <h4>Product: {title}</h4>
       </div>
 
       <div className="cart-item-space">
-        <h4>${price}</h4>
+        <h4> Price: $ {price}</h4>
       </div>
       <div className="cart-item-space cart-item-btn">
-        <div className="mais">
+        <div onClick={() => increment(id)} className="mais">
           <i className="fas fa-plus"></i>
         </div>
         <div className="quantity">
-          <p>1</p>
+          <p>{count}</p>
         </div>
 
-        <div className="menos">
+        <div onClick={() => decrement(id)} className="menos">
           <i className="fas fa-minus"></i>
         </div>
       </div>
-      <div className="cart-item-space">
-        <h4>${price}</h4>
+      <div className="cart-item-space cart-item-total">
+        <h4>
+          Cart total: <span>$ {total}</span>
+        </h4>
       </div>
     </div>
   );
