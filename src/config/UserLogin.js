@@ -1,84 +1,112 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import fire from "./Firebase";
+import OktaSignIn from "@okta/okta-signin-widget";
+
 import loginImg from "./login-img.png";
 import logoTypeImg from "./logotypewhite.png";
 
 class UserLogin extends Component {
-  state = {
-    email: "",
-    password: ""
-  };
-
-  handleChange(e) {
-    this.setState({ [e.target.name]: e.target.value });
+  constructor() {
+    super();
+    this.state = { user: null };
+    this.widget = new OktaSignIn({
+      baseUrl: "https://{dev-984896.okta.com}",
+      clientId: "{0oa2ohir7TOmuTCbd4x6}",
+      redirectUri: "http://localhost:3000",
+      authParams: {
+        responseType: "id_token"
+      }
+    });
+  }
+  componentDidMount() {
+    this.widget.session.get(response => {
+      if (response.status !== "INACTIVE") {
+        this.setState({ user: response.login });
+      } else {
+        this.showLogin();
+      }
+    });
   }
 
-  login(e) {
-    e.preventDefault();
-    fire
-      .auth()
-      .signInWithEmailAndPassword(this.state.email, this.state.password)
-      .then(u => {})
-      .catch(error => {
-        console.log(error);
-      });
+  showLogin() {
+    // Backbone.history.stop();
+    this.widget.renderEl(
+      { el: this.loginContainer },
+      response => {
+        this.setState({ user: response.claims.email });
+      },
+      err => {
+        console.log(err);
+      }
+    );
+  }
+
+  logout() {
+    this.widget.signOut(() => {
+      this.setState({ user: null });
+      this.showLogin();
+    });
   }
 
   render() {
     return (
-      <div className="user-login-container">
-        <div className="login-img">
-          <img src={loginImg} alt="Login Image" />
-        </div>
-        <div className="form-container">
-          <form>
-            <div className="logo-type">
-              <img src={logoTypeImg} alt="LogoType" />
+      <div>
+        {this.state.user ? (
+          <div className="container">
+            <div>Welcome, {this.state.user}!</div>
+            <button onClick={this.logout}>Logout</button>
+          </div>
+        ) : null}
+        {this.state.user ? null : (
+          <div className="user-login-container">
+            <div className="login-img">
+              <img src={loginImg} alt="Login Image" />
             </div>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email</label>
-              <input
-                value={this.state.email}
-                onChange={this.handleChange}
-                type="email"
-                name="email"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                placeholder="Enter email"
-              />
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input
-                value={this.state.password}
-                onChange={this.handleChange}
-                type="password"
-                name="password"
-                class="form-control"
-                id="exampleInputPassword1"
-                placeholder="Password"
-              />
-            </div>
-            <div className="btn-holder">
-              <NavLink to="/home">
-                <button
-                  type="submit"
-                  onClick={this.login}
-                  className="btn-details"
-                >
-                  Login
-                </button>
-              </NavLink>
+            <div className="form-container">
+              <form>
+                <div className="logo-type">
+                  <img src={logoTypeImg} alt="LogoType" />
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter email"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input
+                    type="password"
+                    name="password"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                    placeholder="Password"
+                  />
+                </div>
+                <div className="btn-holder">
+                  <NavLink to="/home">
+                    <button type="submit" className="btn-details">
+                      Login
+                    </button>
+                  </NavLink>
 
-              <NavLink to="/signup">
-                <button style={{ marginLeft: "25px" }} className="btn-details">
-                  Signup
-                </button>
-              </NavLink>
+                  <NavLink to="/signup">
+                    <button
+                      style={{ marginLeft: "25px" }}
+                      className="btn-details"
+                    >
+                      Signup
+                    </button>
+                  </NavLink>
+                </div>
+              </form>
             </div>
-          </form>
-        </div>
+          </div>
+        )}
       </div>
     );
   }

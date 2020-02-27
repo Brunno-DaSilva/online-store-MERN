@@ -789,14 +789,15 @@ input[type="password"]:focus {
 }
 
 .pageNotFound-img {
-  width: 35vw;
-  height: 65vh;
+  width: 25vw;
+  height: 45vh;
   border-radius: 60%;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #ebf2f7;
+  transition: transform 1s ease-in-out;
 }
 
 .pageNotFound-img:hover {
@@ -804,6 +805,7 @@ input[type="password"]:focus {
   -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
   background-color: #ced5da;
+  transition: transform 1s ease-in-out;
 }
 
 .pageNotFound-img img {
