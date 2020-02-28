@@ -5,7 +5,7 @@
  *************************** */
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-
+@import url("https://fonts.googleapis.com/css?family=Oxanium&display=swap");
 /*****************************
  *                           *
  *         Root              *
@@ -773,45 +773,73 @@ input[type="password"]:focus {
 .pageNotFound-container {
   width: 95vw;
   margin: auto;
-  margin-top: -5rem;
+  margin-top: -1rem;
   overflow: hidden;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
   z-index: 999;
 }
 
-.pageNotFound-container h1 {
-  font-size: 30rem;
-  color: #455366;
+.pageNotFound-container h3 {
+  font-family: "Oxanium";
+  font-size: 2rem;
+  margin: 2rem;
+  color: var(--main-vivid-color);
+  letter-spacing: 5px;
 }
 
 .pageNotFound-img {
-  width: 25vw;
-  height: 45vh;
-  border-radius: 60%;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  width: 17vw;
+  height: auto;
+  padding: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ebf2f7;
-  transition: transform 1s ease-in-out;
+  transition: width 2s;
+  transition-timing-function: ease-in-out;
 }
 
-.pageNotFound-img:hover {
-  -moz-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
-  background-color: #ced5da;
-  transition: transform 1s ease-in-out;
+.go-to {
+  visibility: hidden;
+  width: 10rem;
+  background-color: #384352b3;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  list-style: none;
+
+  /* Position the tooltip */
+  position: absolute;
+  top: 25%;
+  left: 59%;
+  z-index: 500;
+  transition: width 2s;
+  transition-timing-function: ease-in-out;
+}
+.pageNotFound-img:hover .go-to {
+  transition: 2s;
+  transition-timing-function: ease-in-out;
+  visibility: visible;
 }
 
 .pageNotFound-img img {
-  width: 40%;
+  width: 100%;
   height: auto;
   margin: auto;
+}
+
+.top-color {
+  background-color: #fafafa;
+  position: absolute;
+  top: 10vh;
+  left: auto;
+  width: 100vw;
+  height: 60vh;
+  z-index: -5;
 }
 
 .bottom-color {
@@ -820,19 +848,38 @@ input[type="password"]:focus {
   left: auto;
   width: 100vw;
   height: 50vh;
-  background-color: #fad7a3;
-  z-index: -5;
+  background-color: #f2f2f2;
+  z-index: -2;
+}
+.four-style-one {
+  font-family: "Oxanium";
+  font-size: 10rem;
+  color: #dee8ee;
+  position: absolute;
+  top: 5%;
+  left: 3%;
+  z-index: -3;
 }
 
-.top-color {
-  background-color: #f7cb89;
+.four-style-two {
+  font-family: "Oxanium";
+  font-size: 10rem;
+  color: #dee8ee;
   position: absolute;
-  top: 10vh;
-  left: auto;
-  width: 100vw;
-  height: 50vh;
-  z-index: -5;
+  top: 33%;
+  left: 7%;
+  z-index: -3;
 }
+.zero-style {
+  font-family: "Oxanium";
+  font-size: 10rem;
+  color: #dee8ee;
+  position: absolute;
+  top: 19.5%;
+  left: 6%;
+  z-index: -3;
+}
+
 /*****************************
  *                           *
  * END - 404 Page-not-found  *
@@ -841,9 +888,132 @@ input[type="password"]:focus {
 
 /*****************************
  *                           *
- *       Media Query         *
+ *      Image Gallery        *
  *                           *
  *************************** */
+.image-gallery-direction {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.image-gallery-container {
+  width: 50%;
+  height: 30vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 2rem;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.products-container {
+  background: transparent;
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-left {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.product-left img {
+  width: 100%;
+  height: auto;
+}
+
+.product-center {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.product-center h2 {
+  margin: 0;
+  margin-top: -2rem;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  color: var(--main-cool-blue-color);
+  text-transform: capitalize;
+}
+.product-center h2 span {
+  margin: 0;
+  margin-top: -2rem;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  color: #dd9e40;
+  text-transform: capitalize;
+}
+
+.product-add-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-transform: capitalize;
+}
+
+/**********************************
+*     Button Style Gallery        *
+***********************************/
+
+.btn-details-gallery,
+.btn-add-cart-gallery {
+  height: auto;
+  padding: 0.5rem;
+  border: 1px solid var(--main-vivid-color);
+  background-color: var(--main-vivid-color);
+  color: var(--main-bg);
+  font-size: 0.8rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0.5rem;
+  transition: 0.4s;
+  width: 7vw;
+}
+.in-cart-gallery {
+  background-color: var(--main-cool-green-color);
+  border: 1px solid var(--main-cool-green-color);
+  color: var(--main-bg);
+  height: auto;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0.5rem;
+  transition: 0.4s;
+}
+.in-cart-gallery:hover,
+.btn-details-gallery:hover,
+.btn-add-cart-gallery:hover {
+  cursor: pointer;
+  color: var(--main-cool-blue-color);
+  border: 1px solid var(--main-cool-blue-color);
+  background: transparent;
+}
+
+/*****************************
+ *                           *
+ *    END - Image Gallery    *
+ *                           *
+ *************************** */
+
+/********************************************************************
+ *                                                                  *
+ *                      Media Query                                 *
+ *                                                                  *
+/********************************************************************
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-width: 320px) and (max-width: 480px) {

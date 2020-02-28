@@ -50,6 +50,22 @@ class UserLogin extends Component {
 
   render() {
     return (
+      // <div>
+      //   {this.state.user ? (
+      //     <div className="user-login-container">
+      //       <div>Welcome, {this.state.user}!</div>
+      //       <button onClick={this.logout}>Logout</button>
+      //     </div>
+      //   ) : null}
+      //   {this.state.user ? null : (
+      //     <div
+      //       ref={div => {
+      //         this.loginContainer = div;
+      //       }}
+      //     />
+      //   )}
+      // </div>
+
       <div>
         {this.state.user ? (
           <div className="container">
