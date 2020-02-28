@@ -1076,7 +1076,7 @@ h3 {
 
 .main-services {
   overflow-y: hidden !important;
-  padding: 3rem;
+  padding: 1rem;
   width: 100vw;
   margin: auto;
   min-height: 70vh;
@@ -1151,6 +1151,97 @@ h3 {
 
 /*******************************
 *       END - Shop icons    
+*******************************/
+
+/*******************************
+*        Home Featured    
+*******************************/
+
+.home-featured-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.featured-img-container {
+  width: 100vw;
+  min-height: 80vh;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-img-holder {
+  padding: 0;
+  width: 45%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.left-img-holder img {
+  width: 100%;
+  height: auto;
+}
+
+.right-img-holder {
+  width: 45%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.right-img-holder h2,
+.left-img-holder2 h2 {
+  font-size: 3.5rem;
+  line-height: 7rem;
+  color: var(--main-dark-bg);
+}
+
+.right-img-holder h3,
+.left-img-holder2 h3 {
+  font-size: 1.8rem;
+  line-height: 3rem;
+
+  color: var(--main-cool-blue-color);
+}
+
+.right-img-holder h4,
+.left-img-holder2 h4 {
+  font-size: 1.2rem;
+  line-height: 3rem;
+  color: var(--main-dark-bg);
+}
+
+.left-img-holder2 {
+  width: 45%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.right-img-holder2 {
+  padding: 0;
+  width: 45%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/*******************************
+*     END - Home Featured    
 *******************************/
 /*****************************
  *                           *
