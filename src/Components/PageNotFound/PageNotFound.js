@@ -22,7 +22,7 @@ export default class PageNotFound extends Component {
             </div>
           </NavLink>
           <div>
-            <h3>Not what you are looking for?</h3>
+            <h3>Oops, Sorry! Back to Products or check out this options </h3>
           </div>
           <div className="image-gallery-direction">
             <ProductConsumer>

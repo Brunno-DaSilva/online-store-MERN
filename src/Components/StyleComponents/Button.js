@@ -11,6 +11,7 @@ export const ButtonContainer = styled.button`
   text-transform: uppercase;
   letter-spacing: 3px;
   margin: 0.5rem;
+  list-style: none;
   transition: 0.4s;
   &:hover {
     cursor: pointer;

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { ProductConsumer } from "../../ContextApi";
-import Title from "../Title/Title";
 import { NavLink } from "react-router-dom";
-import { ButtonContainer } from "../StyleComponents/Button";
+import Slideshow from "./Slideshow";
+import HomeBody from "./HomeBody";
 
 export default class Home extends Component {
   render() {
@@ -13,8 +13,9 @@ export default class Home extends Component {
           const { id, img, price, title } = value.detailProduct;
 
           return (
-            <div className="details-container">
-              <Title name="Welcome to" title="TechFy"></Title>
+            <div className="home-container">
+              <Slideshow />
+              <HomeBody />
             </div>
           );
         }}

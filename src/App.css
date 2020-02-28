@@ -785,9 +785,9 @@ input[type="password"]:focus {
 
 .pageNotFound-container h3 {
   font-family: "Oxanium";
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin: 2rem;
-  color: var(--main-vivid-color);
+  color: #a0aeb8;
   letter-spacing: 5px;
 }
 
@@ -1006,6 +1006,155 @@ input[type="password"]:focus {
 /*****************************
  *                           *
  *    END - Image Gallery    *
+ *                           *
+ *************************** */
+
+/*****************************
+ *                           *
+ *          HOME             *
+ *                           *
+ *************************** */
+
+/*******************************
+  *        SlideShow   
+  *******************************/
+
+.slide-container {
+  margin-top: -3rem !important;
+  width: 90%;
+  margin: auto;
+}
+
+h3 {
+  text-align: center;
+}
+
+.each-slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 80vh;
+}
+
+.each-slide span {
+  padding: 20px;
+  font-size: 20px;
+  background: #efefef;
+  text-align: center;
+}
+
+.each-fade {
+  display: flex;
+}
+
+.each-fade .image-container {
+  width: 95%;
+  overflow: hidden;
+}
+
+.each-fade .image-container img {
+  width: 100%;
+}
+
+.each-fade h2 {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background: #adceed;
+}
+
+/*******************************
+*       END - SlideShow    
+*******************************/
+
+/*******************************
+*          Shop icons    
+*******************************/
+
+.main-services {
+  overflow-y: hidden !important;
+  padding: 3rem;
+  width: 100vw;
+  margin: auto;
+  min-height: 70vh;
+  background-color: #a0aeb8;
+  color: #3c4858;
+  z-index: -2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none !important;
+}
+
+.main-services h1 {
+  font-family: "Open Sans", sans-serif !important;
+  text-transform: uppercase;
+  font-size: 2.7rem;
+  letter-spacing: 0.7rem;
+  margin-bottom: 4rem;
+  margin-top: 3rem;
+  color: #ffffff;
+  list-style: none !important;
+}
+
+.body-icon-container {
+  width: 70vw !important;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none !important;
+}
+.body-icon-container a {
+  text-decoration: none !important;
+}
+
+.icon-item {
+  width: 18vw;
+  height: 20vh;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #3c4858;
+  color: #3c4858;
+  list-style: none !important;
+}
+
+.icon-item:hover {
+  border: 1px solid #fccb81;
+  color: #fccb81;
+  list-style: none !important;
+  text-decoration: none;
+}
+
+.icon-item-top i {
+  color: #3c4858;
+
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  list-style: none !important;
+}
+.icon-item-info h3 {
+  color: #3c4858;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  list-style: none !important;
+}
+
+/*******************************
+*       END - Shop icons    
+*******************************/
+/*****************************
+ *                           *
+ *       END - Home          *
  *                           *
  *************************** */
 
