@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Marcellus&display=swap");
+
+:root {
+  --main-bg: #ffffff;
+  --main-dark-bg: #374455;
+  --main-gray-color: #f9f9f9;
+  --main-dark-gray: #9e9d9d;
+  --main-vivid-color: #f0ad46; /*#fbb710*/
+  --main-cool-green-color: #76d3c9;
+  --main-cool-blue-color: #a0aeb8;
+}
+/*******************************
+*     Footer and SVG
+*******************************/
+
+footer {
+  font-family: "Quicksand", sans-serif;
+  min-height: 30vh;
+  color: var(--main-bg);
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: auto;
+  padding: 3rem;
+  background-color: var(--main-vivid-color);
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+
+footer span {
+  color: var(--main-dark-bg);
+}
+footer img {
+  width: 90px;
+  height: auto;
+}
+
+footer .info-Bruno {
+  width: 70%;
+  padding: 20px;
+  text-align: center;
+}
+
+.info-Bruno p {
+  color: var(--main-bg);
+  font-size: 2rem;
+  letter-spacing: 4px;
+  font-weight: bolder;
+}
+
+.info-Bruno a {
+  color: var(--main-bg);
+  padding: 1.2rem;
+  font-size: 2rem;
+}
+
+.info-Bruno a:hover {
+  color: var(--main-dark-bg);
+}

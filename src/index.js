@@ -22,7 +22,6 @@ ReactDOM.render(
         onAuthRequired={onAuthRequired}
       >
         <App />
-
         <Route path="/implicit/callback" component={ImplicitCallback} />
       </Security>
     </Router>

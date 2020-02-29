@@ -453,7 +453,7 @@ export const storeProducts = [
     id: 31,
     title: "DynaTAC 8000X",
     img:
-      "https://res.cloudinary.com/duprwuo4j/image/upload/v1582604408/imgs_starwars/EcommerceProject/firstcellphone_wjlvle.png",
+      "https://res.cloudinary.com/duprwuo4j/image/upload/v1582951015/imgs_starwars/EcommerceProject/firstcellphone_wjlvle.png",
     price: 3995,
     company: "Motorola",
     info:

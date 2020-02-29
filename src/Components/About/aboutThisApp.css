@@ -23,6 +23,7 @@
   --light-font-color: #e5f2fc;
   --light-font-color-title: #c9dded;
   --gray-neutral-color: #63717d;
+  --main-vivid-color: #f0ad46; /*#fbb710*/
 }
 
 section {
@@ -31,7 +32,11 @@ section {
   align-items: center;
 }
 
-.container-about {
+#aboutMeApp {
+  margin-top: -7rem !important;
+}
+
+.container-about-this-app {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -45,7 +50,7 @@ section {
 }
 
 .span-one-this {
-  color: #f6d55c;
+  color: var(--main-vivid-color);
   text-decoration: underline;
 }
 .span-two-this {
@@ -74,17 +79,14 @@ section {
 }
 
 .left-content-this,
-.right-content {
+.right-content-about {
   width: 45%;
   height: auto;
 }
 
-.right-content img {
-  width: 60vw;
-  height: auto;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+.right-content-about img {
+  width: 100%;
+  margin-bottom: 12rem;
 }
 
 .left-content-this {
@@ -136,14 +138,14 @@ section {
   color: #535b75;
   font-size: 4rem;
   letter-spacing: 4px;
-  margin-top: 2rem;
+  margin: 3rem 0;
   padding-right: 0.5rem;
   font-family: "Shadows Into Light Two", cursive;
   transform: rotate(3deg);
   z-index: 9;
 }
 /*//////////////////////////////////
-//          ABOUT THIS APP BODY
+//    ABOUT THIS APP BODY
 //////////////////////////////////*/
 
 .about-container {

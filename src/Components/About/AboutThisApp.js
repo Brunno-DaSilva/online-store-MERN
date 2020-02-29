@@ -1,11 +1,17 @@
 import React, { Component } from "react";
 import About from "./About";
+
 import "./aboutThisApp.css";
+import img2 from "./logotype.png";
 
 export default class AboutThisApp extends Component {
   render() {
     return (
-      <section id="aboutMe" classNameName="container-about" tabindex="-1">
+      <section
+        id="aboutMeApp"
+        classNameName="container-about-this-app"
+        tabindex="-1"
+      >
         <div className="overlay-about-this"></div>
         <div className="title-about-this">
           <h1>
@@ -19,30 +25,25 @@ export default class AboutThisApp extends Component {
           <div className="left-content-this">
             <div className="left-container-title-this">
               <h3>
-                React on Rails
+                MERN stack
                 <br />
-                Hotel Reservation System
+                E-commerce site
               </h3>
             </div>
             <div className="left-container-text">
               <p>
-                Full-stack Application featuring Ruby, Rails, Postgress, and
-                React.
+                Full-stack Application featuring MongoDB, Express, React, and
+                Node.
               </p>
               <p>
                 Fully functional and interactive, this web application allows
-                users to see a list of hotel's rooms, inspect information and
-                reserve the room. Additionally, the user can see, update, and
-                delete reservations.
+                users to see a list of products, see details about each product,
+                add them to the cart and buy the products.
               </p>
             </div>
           </div>
-          <div className="right-content">
-            <img
-              id="img2"
-              src="https://res.cloudinary.com/duprwuo4j/image/upload/v1581091889/imgs_starwars/imgs/Zilnai-logo2_xazqwf.png"
-              alt="Zilnai Reservations"
-            />
+          <div className="right-content-about">
+            <img id="img2" src={img2} alt="TechFy" />
           </div>
         </div>
         <div className="sub-title-this">
@@ -57,12 +58,12 @@ export default class AboutThisApp extends Component {
         <div className="about-container">
           <div className="text-area-one">
             <h4>App Concept: </h4>
+
             <p>
-              Full-stack react-on-rails Hotel reservation system application.
-              Fully functional and interactive, this web application allows
-              users to see a list of hotel's room displayed as cards, inspect
-              rooms information and reserve the room. The user also can edit and
-              save a reservation, delete an existent reservation.
+              Full-stack MERN E-Commerce site. Fully functional and interactive,
+              this web application allows users to see a list of products, see
+              details about each product, add them to the cart, increment the
+              number of items and buy the products utilizing PayPal.
             </p>
           </div>
           <div className="text-area-two">
@@ -70,13 +71,16 @@ export default class AboutThisApp extends Component {
             <div className="organize-links">
               <div className="skills-left-col">
                 <p>React</p>
-                <p>Rails</p>
+                <p>MongoDB</p>
 
-                <p>Ruby</p>
-                <p>PostgreSQL</p>
+                <p>Express</p>
+                <p>Node</p>
 
                 <p>JS</p>
                 <p>CSS</p>
+                <p>NPM React Slideshow</p>
+                <p>FireBase</p>
+                <p>NPM PayPal Button</p>
               </div>
 
               <div className="skills-right-col">
@@ -86,9 +90,12 @@ export default class AboutThisApp extends Component {
                 <p>Adobe Illustrator</p>
                 <p>Image retrieved from Unsplash and unDraw</p>
                 <p>
-                  Image credits:
+                  Credits:
                   <a href="https://unsplash.com/">Unsplash.com </a>
                   <a href="https://undraw.co/"> unDraw.co</a>
+                  <a href="https://github.com/femioladeji/react-slideshow">
+                    Slideshow Repo
+                  </a>
                 </p>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { ProductConsumer } from "../../ContextApi";
 import { NavLink } from "react-router-dom";
+import Footer from "../Footer/Footer";
 import Slideshow from "./Slideshow";
 import HomeServices from "./HomeServices";
 import HomeFeatured from "./HomeFeatured";
@@ -18,6 +19,7 @@ export default class Home extends Component {
               <Slideshow />
               <HomeServices />
               <HomeFeatured />
+              <Footer />
             </div>
           );
         }}

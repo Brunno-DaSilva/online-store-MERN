@@ -5,6 +5,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import ProductList from "./Components/ProductList/ProductList";
 import Cart from "./Components/Cart/Cart";
 import Details from "./Components/Details/Details";
+import AboutThisApp from "./Components/About/AboutThisApp";
 import Modal from "./Components/Modal/Modal";
 import PageNotFound from "./Components/PageNotFound/PageNotFound";
 import UserLogin from "./config/UserLogin";
@@ -22,6 +23,7 @@ function App() {
         <Route exact path="/products" component={ProductList}></Route>
         <Route path="/details" component={Details}></Route>
         <Route path="/cart" component={Cart}></Route>
+        <Route path="/about" component={AboutThisApp}></Route>
         <Route
           path="/login"
           render={() => (

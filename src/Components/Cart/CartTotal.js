@@ -1,8 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import PayPalButton from "./PayPal";
 import logoImage from "./logotypewhite.png";
 
-export default function CartTotal({ value }) {
+export default function CartTotal({ value, history }) {
   const { cartSubTotal, productTax, cartTotal, clearItems } = value;
   return (
     <div className="cart-total-container">
@@ -54,7 +55,11 @@ export default function CartTotal({ value }) {
           </div>
 
           <div>
-            <button className="btn-details">Buy Now</button>
+            <PayPalButton
+              totalAmount={cartTotal}
+              clearCart={clearItems}
+              history={history}
+            />
           </div>
         </div>
       </div>

@@ -835,7 +835,7 @@ input[type="password"]:focus {
 .top-color {
   background-color: #fafafa;
   position: absolute;
-  top: 10vh;
+  top: 8vh;
   left: auto;
   width: 100vw;
   height: 60vh;
@@ -1315,7 +1315,7 @@ h3 {
 @media only screen and (min-width: 1824px) {
   /* Styles */
   body {
-    background-color: black !important;
+    background-color: #ffffff !important;
   }
 }
 
