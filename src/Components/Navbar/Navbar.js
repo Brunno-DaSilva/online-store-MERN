@@ -5,6 +5,31 @@ import { ButtonContainer } from "../StyleComponents/Button";
 import fire from "../../config/Firebase";
 
 export default class Navbar extends Component {
+  constructor() {
+    super();
+    this.state = {
+      user: null
+    };
+    this.authListener = this.authListener.bind(this);
+  }
+
+  componentDidMount() {
+    this.authListener();
+  }
+
+  authListener() {
+    fire.auth().onAuthStateChanged(user => {
+      console.log(user);
+      if (user) {
+        this.setState({ user });
+        localStorage.setItem("user", user.uid);
+      } else {
+        this.setState({ user: null });
+        localStorage.removeItem("user");
+      }
+    });
+  }
+
   logout() {
     fire.auth().signOut();
   }
@@ -48,12 +73,17 @@ export default class Navbar extends Component {
               </li>
               <li className="user-login">
                 <NavLink to="/login" className="style-links">
-                  Login
+                  {this.state.user ? <span>Welcome</span> : <span> Login</span>}
                 </NavLink>
               </li>
               <li className="user-signup">
                 <NavLink to="/signup" className="style-links">
                   Signup
+                </NavLink>
+              </li>
+              <li onClick={this.logout} className="user-logout">
+                <NavLink to="/home" className="style-links">
+                  <span>Logout</span>
                 </NavLink>
               </li>
             </ul>

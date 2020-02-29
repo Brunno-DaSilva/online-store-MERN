@@ -168,10 +168,12 @@ body {
   transition: opacity 250ms ease-in-out 250ms;
 }
 
+.user-logout {
+}
+
 .style-cart {
   font-size: 1.5rem;
-  margin-left: 15rem;
-  margin-right: -5rem;
+  margin-left: 4rem;
   padding: 0.6rem;
   color: var(--main-vivid-color);
   transition: 0.4s;

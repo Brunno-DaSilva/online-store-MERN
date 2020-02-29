@@ -2,7 +2,6 @@ import React from "react";
 import headphoneImg from "./images/headphone.png";
 import iPhoneImg from "./images/iphone11right.png";
 import beatsWhite from "./images/beatsWhite.png";
-
 import { ButtonContainer } from "../StyleComponents/Button";
 import { NavLink } from "react-router-dom";
 
