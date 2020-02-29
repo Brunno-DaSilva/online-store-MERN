@@ -75,7 +75,6 @@ body {
 }
 .main-navbar {
   border-bottom: 1px solid var(--main-cool-blue-color);
-
   background-color: #ffffff;
   text-align: center;
   position: fixed;
@@ -144,7 +143,7 @@ body {
 
 .nav-links li {
   margin-bottom: 1em;
-  margin-left: 1em;
+  /* margin-left: 1em; */
 }
 .nav-links .style-links {
   color: var(--main-cool-blue-color);
@@ -168,12 +167,8 @@ body {
   transition: opacity 250ms ease-in-out 250ms;
 }
 
-.user-logout {
-}
-
 .style-cart {
   font-size: 1.5rem;
-  margin-left: 4rem;
   padding: 0.6rem;
   color: var(--main-vivid-color);
   transition: 0.4s;
@@ -184,7 +179,7 @@ body {
   transition: 250ms ease-in-out 250ms;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1200px) {
   .nav-toggle-label {
     display: none;
   }
@@ -210,6 +205,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-left: 1rem;
   }
 
   .nav-links ul {
@@ -243,6 +239,7 @@ body {
     transform: scale(1, 1);
   }
 }
+
 .ghost {
   position: relative;
   width: 100vw;
@@ -466,7 +463,7 @@ body {
  *************************** */
 
 .user-login {
-  margin-left: 7rem !important;
+  margin-left: 3rem !important;
 }
 .user-login i {
   margin-left: 0.7rem !important;
@@ -1022,7 +1019,7 @@ input[type="password"]:focus {
   *******************************/
 
 .slide-container {
-  margin-top: -3rem !important;
+  margin-top: -4rem !important;
   width: 90%;
   margin: auto;
 }
@@ -1081,7 +1078,7 @@ h3 {
   padding: 1rem;
   width: 100vw;
   margin: auto;
-  min-height: 70vh;
+  min-height: 50vh;
   background-color: #a0aeb8;
   color: #3c4858;
   z-index: -2;
@@ -1255,77 +1252,20 @@ h3 {
  *                                                                  *
  *                      Media Query                                 *
  *                                                                  *
-/********************************************************************
+/********************************************************************/
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-  /* Styles */
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
   body {
-    background-color: red !important;
+    display: flex;
+    flex-direction: column;
   }
 }
 
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width: 321px) {
-  /* Styles */
-  body {
-    background-color: green !important;
-  }
+@media all and (min-width: 480px) and (max-width: 768px) {
 }
 
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width: 320px) {
-  /* Styles */
-  body {
-    background-color: blue !important;
-  }
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  /* Styles */
-  body {
-    background-color: gold !important;
-  }
-}
-
-/* iPads (landscape) ----------- */
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  /* Styles */
-  body {
-    background-color: purple !important;
-  }
-}
-
-/* iPads (portrait) ----------- */
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-  /* Styles */
-  body {
-    background-color: coral;
-  }
-}
-
-/* Desktops and laptops ----------- */
-@media only screen and (min-width: 1224px) {
-  /* Styles */
-  body {
-    background-color: white !important;
-  }
-}
-
-/* Large screens ----------- */
-@media only screen and (min-width: 1824px) {
-  /* Styles */
-  body {
-    background-color: #ffffff !important;
-  }
-}
-
-/* iPhone 4 ----------- */
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-  only screen and (min-device-pixel-ratio: 1.5) {
-  /* Styles */
-  body {
-    background-color: red !important;
-  }
+@media all and (max-width: 480px) {
 }

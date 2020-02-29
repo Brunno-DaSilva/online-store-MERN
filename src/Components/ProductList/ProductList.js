@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import Product from "../Product/Product";
-import Title from "../Title/Title";
 import Footer from "../Footer/Footer";
 import { ProductConsumer } from "../../ContextApi";
+import HomeServices from "../Home/HomeServices";
 
 export default class ProductList extends Component {
   render() {
     return (
       <React.Fragment>
+        <HomeServices />
         <div className="product-list-container">
-          <Title name="Our" title="Products" />
           <div className="product-list-holder">
             <ProductConsumer>
               {value => {
