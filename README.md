@@ -1,69 +1,53 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# TechFy - Online Store
 
-## Available Scripts
+## Concept: 
+Full-stack MERN E-Commerce site. Fully functional and interactive, this web application allows users to see a list of products, see details about each product, add them to the cart, increment the number of items and buy the products utilizing PayPal.
 
-In the project directory, you can run:
+## Technologies Used: 
 
-### `yarn start`
+  *React
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  *MongoDB
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+  *Express
 
-### `yarn test`
+  *Node
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  *JS
 
-### `yarn build`
+  *CSS
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  *NPM React Slideshow
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+  *FireBase
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  *NPM PayPal Button
 
-### `yarn eject`
+  *FontAwesome
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  *Cloudinary
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  *Adobe Illustrator
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  *Image retrieved from Unsplash and unDraw
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  *Credits:
+  *Unsplash.com
+  *unDraw.co
+  *Slideshow Repo
 
-## Learn More
+## Approach: 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+I had a defined idea of what I was looking for. A E-commerce site that provides users with a variety of technologies devices from cell phones to TVs, allowing the user to view more information about the products and to add to the cart, increment the number of items before purchase and a PayPal button to complete the transaction.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+I am a super visual person, so I like to start my projects by designing the application wireframe on my GA draw handbook with a pencil, nothing too fancy but for a visual person like me it makes a whole lot of difference, I feel like I have a goal to meet, like when I am doing a mockup of some website, the design is layout for me I just need to follow the patterns. Once that part is completed I start thinking about some little details that would bring character to my projects, like a funny or meaningful name or a logo, or changing the icon on the cursor when the user approaches a certain area of my application, this particular character can be seen throughout the entire application (like an easter egg, except I am the only one who knows about it lol). In particular, for this project I decided to create the logo and the name come after the company Shopfy. After this, I jumped into the design and develop my back-end and my client component structure as always.
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Challenges: 
+Get the UserLogin and SignUp components to work properly utilizing Firebase.
 
-### Analyzing the Bundle Size
+I have worked with FireBase prior this project to set up my contact form, which worked pretty well. Although the overall concept still the same, there were couple variants like passing up the state to gather the user name or email to display in my navbar and hide the Login and display the logout. I also tried OKTA which did not worked well. So I was able to get the user logged in however it still not making a lot of sense on how to passing the information from Firebase up to a higher component.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## App Demo 
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# online-store-MERN
+Coming Soon
