@@ -95,7 +95,7 @@ export default class ProductList extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div className="products-page-margin">
         <div className="main-services">
           <div class="sub-title-services">
             <h1>Shop the Latest Tech</h1>
@@ -256,7 +256,7 @@ export default class ProductList extends Component {
           </div>
         </div>
         <Footer />
-      </React.Fragment>
+      </div>
     );
   }
 }

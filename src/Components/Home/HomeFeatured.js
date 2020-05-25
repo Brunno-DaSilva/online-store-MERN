@@ -55,7 +55,7 @@ export default function HomeFeatured() {
           <div className="left-img-holder2">
             <h2>Motorola</h2>
             <h3>The first DynaTAC 8000X</h3>
-            <h4>With 2 extra car battery</h4>
+            <h4>With 2 extra car batteries</h4>
             <NavLink to="/products">
               <ButtonContainer>Shop Now</ButtonContainer>
             </NavLink>

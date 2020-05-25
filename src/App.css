@@ -260,6 +260,10 @@ body {
  *                           *
  *************************** */
 
+.products-page-margin {
+  margin-top: -10rem !important;
+}
+
 .product-list-holder {
   width: 100vw;
   min-height: 100vh;
