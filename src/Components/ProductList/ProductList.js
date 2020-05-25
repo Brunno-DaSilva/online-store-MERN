@@ -16,35 +16,80 @@ export default class ProductList extends Component {
   };
 
   sortSmartPhones = () => {
-    const { smartPhones, laptops, monitors, headphones, tvs } = this.state;
+    const { smartPhones } = this.state;
 
     this.setState({
       allProducts: false,
       smartPhones: !smartPhones,
-      laptops: laptops,
-      monitors: monitors,
-      headphones: headphones,
-      tvs: tvs,
+      laptops: false,
+      monitors: false,
+      headphones: false,
+      tvs: false,
     });
   };
 
   sortLaptops = () => {
-    const {
-      allProducts,
-      smartPhones,
-      laptops,
-      monitors,
-      headphones,
-      tvs,
-    } = this.state;
+    const { laptops } = this.state;
 
     this.setState({
-      allProducts: allProducts,
-      smartPhones: !smartPhones,
+      allProducts: false,
+      smartPhones: false,
       laptops: !laptops,
+      monitors: false,
+      headphones: false,
+      tvs: false,
+    });
+  };
+
+  sortMonitors = () => {
+    const { monitors } = this.state;
+
+    this.setState({
+      allProducts: false,
+      smartPhones: false,
+      laptops: false,
       monitors: !monitors,
+      headphones: false,
+      tvs: false,
+    });
+  };
+
+  sortHeadphone = () => {
+    const { headphones } = this.state;
+
+    this.setState({
+      allProducts: false,
+      smartPhones: false,
+      laptops: false,
+      monitors: false,
       headphones: !headphones,
+      tvs: false,
+    });
+  };
+
+  sortTvs = () => {
+    const { tvs } = this.state;
+
+    this.setState({
+      allProducts: false,
+      smartPhones: false,
+      laptops: false,
+      monitors: false,
+      headphones: false,
       tvs: !tvs,
+    });
+  };
+
+  sortAll = () => {
+    const { allProducts } = this.state;
+
+    this.setState({
+      allProducts: !allProducts,
+      smartPhones: false,
+      laptops: false,
+      monitors: false,
+      headphones: false,
+      tvs: false,
     });
   };
 
@@ -56,7 +101,20 @@ export default class ProductList extends Component {
             <h1>Shop the Latest Tech</h1>
           </div>
           <div className="body-icon-container">
-            {/* shopItems list  */}
+            {/* Smart Phones  */}
+            <div className="shop-item-wrapper" onClick={this.sortSmartPhones}>
+              <div className="icon-item">
+                <div className="icon-item-top">
+                  <i className="fas fa-mobile-alt"></i>
+                </div>
+                <div className="icon-item-info">
+                  <h3>Smart Phones</h3>
+                </div>
+              </div>
+            </div>
+
+            {/* Laptops */}
+
             <div onClick={this.sortLaptops}>
               <div className="icon-item">
                 <div className="icon-item-top">
@@ -68,37 +126,8 @@ export default class ProductList extends Component {
               </div>
             </div>
 
-            <div className="shop-item-wrapper" onClick={this.sortSmartPhones}>
-              <div className="icon-item">
-                <div className="icon-item-top">
-                  <i className="fas fa-mobile-alt"></i>
-                </div>
-                <div className="icon-item-info">
-                  <h3>Smart Phones</h3>
-                </div>
-              </div>
-            </div>
-            <NavLink to="products">
-              <div className="icon-item">
-                <div className="icon-item-top">
-                  <i className="fas fa-tv"></i>
-                </div>
-                <div className="icon-item-info">
-                  <h3>TVs</h3>
-                </div>
-              </div>
-            </NavLink>
-            <NavLink to="products">
-              <div className="icon-item">
-                <div className="icon-item-top">
-                  <i className="fas fa-headphones"></i>
-                </div>
-                <div className="icon-item-info">
-                  <h3>headphone</h3>
-                </div>
-              </div>
-            </NavLink>
-            <NavLink to="products">
+            {/* Monitors  */}
+            <div className="shop-item-wrapper" onClick={this.sortMonitors}>
               <div className="icon-item">
                 <div className="icon-item-top">
                   <i class="fas fa-desktop"></i>
@@ -107,8 +136,34 @@ export default class ProductList extends Component {
                   <h3>monitors</h3>
                 </div>
               </div>
-            </NavLink>
-            <NavLink to="products">
+            </div>
+
+            {/* Headphones  */}
+            <div className="shop-item-wrapper" onClick={this.sortHeadphone}>
+              <div className="icon-item">
+                <div className="icon-item-top">
+                  <i className="fas fa-headphones"></i>
+                </div>
+                <div className="icon-item-info">
+                  <h3>headphone</h3>
+                </div>
+              </div>
+            </div>
+
+            {/* Tvs */}
+            <div className="shop-item-wrapper" onClick={this.sortTvs}>
+              <div className="icon-item">
+                <div className="icon-item-top">
+                  <i className="fas fa-tv"></i>
+                </div>
+                <div className="icon-item-info">
+                  <h3>TVs</h3>
+                </div>
+              </div>
+            </div>
+
+            {/* All Items  */}
+            <div className="shop-item-wrapper" onClick={this.sortAll}>
               <div className="icon-item">
                 <div className="icon-item-top">
                   <i class="fas fa-undo-alt"></i>
@@ -117,7 +172,7 @@ export default class ProductList extends Component {
                   <h3>All</h3>
                 </div>
               </div>
-            </NavLink>
+            </div>
           </div>
         </div>
 
