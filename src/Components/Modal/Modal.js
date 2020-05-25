@@ -7,9 +7,11 @@ export default class Modal extends Component {
   render() {
     return (
       <ProductConsumer>
-        {value => {
+        {(value) => {
           const { modalOpen, closeModal } = value;
+
           const { img, title, price } = value.modalProduct;
+
           if (!modalOpen) {
             return null;
           } else {

@@ -7,11 +7,12 @@ import PropTypes from "prop-types";
 export default class Product extends Component {
   render() {
     const { id, title, img, price, inCart } = this.props.product;
+
     return (
       <ProductWrapper className="card-main-container">
         <div className="products-container">
           <ProductConsumer>
-            {value => {
+            {(value) => {
               return (
                 <div
                   className="product-left"
@@ -36,7 +37,7 @@ export default class Product extends Component {
             </div>
 
             <ProductConsumer>
-              {value => {
+              {(value) => {
                 return (
                   <div className="btn-holder">
                     <div onClick={() => value.handleDetails(id)}>
@@ -78,8 +79,8 @@ Product.propTypes = {
     title: PropTypes.string,
     img: PropTypes.string,
     price: PropTypes.number,
-    inCart: PropTypes.bool
-  }).isRequired
+    inCart: PropTypes.bool,
+  }).isRequired,
 };
 
 const ProductWrapper = styled.div`

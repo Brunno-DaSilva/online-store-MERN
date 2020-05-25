@@ -10,8 +10,9 @@ export default class Cart extends Component {
     return (
       <div>
         <ProductConsumer>
-          {value => {
+          {(value) => {
             const { cart } = value;
+
             if (cart.length > 0) {
               return (
                 <React.Fragment>

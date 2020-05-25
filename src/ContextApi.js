@@ -6,6 +6,7 @@ const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
   state = {
+    hasSignedUp: false,
     products: [],
     detailProduct: detailProduct,
     cart: [],
@@ -13,7 +14,7 @@ class ProductProvider extends Component {
     modalProduct: detailProduct,
     cartSubTotal: 0,
     productTax: 0,
-    cartTotal: 0
+    cartTotal: 0,
   };
 
   componentDidMount() {
@@ -22,7 +23,7 @@ class ProductProvider extends Component {
 
   setProducts = () => {
     let tempProducts = [];
-    storeProducts.forEach(item => {
+    storeProducts.forEach((item) => {
       const singleItem = { ...item };
       tempProducts = [...tempProducts, singleItem];
     });
@@ -31,18 +32,19 @@ class ProductProvider extends Component {
     });
   };
 
-  getItem = id => {
-    const product = this.state.products.find(item => item.id === id);
+  getItem = (id) => {
+    const product = this.state.products.find((item) => item.id === id);
     return product;
   };
-  handleDetails = id => {
+
+  handleDetails = (id) => {
     const product = this.getItem(id);
     this.setState(() => {
       return { detailProduct: product };
     });
   };
 
-  addToCart = id => {
+  addToCart = (id) => {
     let tempProducts = [...this.state.products];
     const index = tempProducts.indexOf(this.getItem(id));
     const product = tempProducts[index];
@@ -55,12 +57,12 @@ class ProductProvider extends Component {
       return {
         products: [...tempProducts],
         cart: [...this.state.cart, product],
-        detailProduct: { ...product }
+        detailProduct: { ...product },
       };
     }, this.addTotals);
   };
 
-  openModal = id => {
+  openModal = (id) => {
     const product = this.getItem(id);
     this.setState(() => {
       return { modalProduct: product, modalOpen: true };
@@ -73,9 +75,9 @@ class ProductProvider extends Component {
     });
   };
 
-  increment = id => {
+  increment = (id) => {
     let tempCart = [...this.state.cart];
-    const selectedProduct = tempCart.find(item => {
+    const selectedProduct = tempCart.find((item) => {
       return item.id === id;
     });
     const index = tempCart.indexOf(selectedProduct);
@@ -84,14 +86,14 @@ class ProductProvider extends Component {
     product.total = product.count * product.price;
     this.setState(() => {
       return {
-        cart: [...tempCart]
+        cart: [...tempCart],
       };
     }, this.addTotals);
   };
 
-  decrement = id => {
+  decrement = (id) => {
     let tempCart = [...this.state.cart];
-    const selectedProduct = tempCart.find(item => {
+    const selectedProduct = tempCart.find((item) => {
       return item.id === id;
     });
     const index = tempCart.indexOf(selectedProduct);
@@ -109,16 +111,17 @@ class ProductProvider extends Component {
 
   getTotals = () => {
     let subTotal = 0;
-    this.state.cart.map(item => (subTotal += item.total));
+    this.state.cart.map((item) => (subTotal += item.total));
     const tempTax = subTotal * 0.08;
     const tax = parseFloat(tempTax.toFixed(2));
     const total = subTotal + tax;
     return {
       subTotal,
       tax,
-      total
+      total,
     };
   };
+
   addTotals = () => {
     const totals = this.getTotals();
     this.setState(
@@ -126,7 +129,7 @@ class ProductProvider extends Component {
         return {
           cartSubTotal: totals.subTotal,
           productTax: totals.tax,
-          cartTotal: totals.total
+          cartTotal: totals.total,
         };
       },
       () => {
@@ -135,7 +138,7 @@ class ProductProvider extends Component {
     );
   };
 
-  removeItem = id => {
+  removeItem = (id) => {
     let tempProducts = [...this.state.products];
     let tempCart = [...this.state.cart];
 
@@ -145,14 +148,14 @@ class ProductProvider extends Component {
     removedProduct.count = 0;
     removedProduct.total = 0;
 
-    tempCart = tempCart.filter(item => {
+    tempCart = tempCart.filter((item) => {
       return item.id !== id;
     });
 
     this.setState(() => {
       return {
         cart: [...tempCart],
-        products: [...tempProducts]
+        products: [...tempProducts],
       };
     }, this.addTotals);
   };
@@ -169,6 +172,10 @@ class ProductProvider extends Component {
     );
   };
 
+  onSignUp = () => {
+    this.setState({ hasSignedUp: true });
+  };
+
   render() {
     return (
       <ProductContext.Provider
@@ -181,7 +188,8 @@ class ProductProvider extends Component {
           increment: this.increment,
           decrement: this.decrement,
           removeItem: this.removeItem,
-          clearItems: this.clearItems
+          clearItems: this.clearItems,
+          onSignUp: this.onSignUp,
         }}
       >
         {this.props.children}

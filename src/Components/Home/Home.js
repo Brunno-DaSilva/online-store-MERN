@@ -10,8 +10,7 @@ export default class Home extends Component {
   render() {
     return (
       <ProductConsumer>
-        {value => {
-          console.log(value.detailProduct);
+        {(value) => {
           const { id, img, price, title } = value.detailProduct;
 
           return (

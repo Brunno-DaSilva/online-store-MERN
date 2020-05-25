@@ -7,10 +7,11 @@ import logoTypeImg from "./logotypewhite.png";
 export default class Signup extends Component {
   state = {
     email: "",
-    password: ""
+    password: "",
   };
 
   handleChange(e) {
+    e.preventDefault();
     this.setState({ [e.target.name]: e.target.value });
   }
 
@@ -19,11 +20,7 @@ export default class Signup extends Component {
     fire
       .auth()
       .createUserWithEmailAndPassword(this.state.email, this.state.password)
-      .then(u => {})
-      .then(u => {
-        console.log(u);
-      })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
       });
   }
@@ -39,7 +36,7 @@ export default class Signup extends Component {
               <div className="logo-type">
                 <img src={logoTypeImg} alt="LogoType" />
               </div>
-              <div class="form-group">
+              {/* <div class="form-group">
                 <label for="exampleInputEmail1">Name</label>
                 <input
                   value={this.state.name}
@@ -50,7 +47,7 @@ export default class Signup extends Component {
                   aria-describedby="emailHelp"
                   placeholder="Your name"
                 />
-              </div>
+              </div> */}
               <div class="form-group">
                 <label for="exampleInputEmail1">Email</label>
                 <input

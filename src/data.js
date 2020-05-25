@@ -12,7 +12,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "smartPhones",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 6,
@@ -27,7 +27,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "smartPhones",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "smartPhones",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 4,
@@ -57,7 +57,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "smartPhones",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 5,
@@ -72,7 +72,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "smartPhones",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 2,
@@ -87,7 +87,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "smartPhones",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 7,
@@ -102,7 +102,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "smartPhones",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 8,
@@ -117,7 +117,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "smartPhones",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 9,
@@ -132,7 +132,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "smartPhones",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 10,
@@ -147,7 +147,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "smartPhones",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 11,
@@ -162,7 +162,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "laptops",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 12,
@@ -177,7 +177,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "laptops",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 13,
@@ -192,7 +192,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "laptops",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 14,
@@ -207,7 +207,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "laptops",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 15,
@@ -222,7 +222,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "laptops",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 16,
@@ -237,7 +237,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "laptops",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 17,
@@ -252,7 +252,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "laptops",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 18,
@@ -267,7 +267,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "laptops",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 19,
@@ -282,7 +282,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "laptops",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 20,
@@ -297,7 +297,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "monitors",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 21,
@@ -312,7 +312,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "monitors",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 22,
@@ -327,7 +327,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "monitors",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 23,
@@ -342,7 +342,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "monitors",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 24,
@@ -357,7 +357,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "headphones",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 25,
@@ -372,7 +372,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "headphones",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 26,
@@ -387,7 +387,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "headphones",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 27,
@@ -402,7 +402,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "headphones",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 28,
@@ -417,7 +417,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "headphones",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 29,
@@ -432,7 +432,7 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "headphones",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
   {
     id: 30,
@@ -447,10 +447,59 @@ export const storeProducts = [
     count: 0,
     total: 0,
     category: "headphones",
-    date: "12/29/2019"
+    date: "12/29/2019",
   },
+
   {
     id: 31,
+    title: "Samsung QLED - 82 Class",
+    img:
+      "https://res.cloudinary.com/duprwuo4j/image/upload/v1590422721/imgs_starwars/EcommerceProject/QLEDSamSumg_imtyu4.png",
+    price: 5995,
+    company: "Samsung",
+    info:
+      "Stay at the top of your game with this once in a life time product. NVIDIA G-SYNC technology eliminates screen tearing and stuttering for smooth gameplay, while the 178-degree viewing angle delivers crisp, bright pictures from almost any direction. This product has an ergonomic stand with tilt, swivel, and height adjustment settings for a customized setup, and the 4K resolution offers sharp visuals.",
+    inCart: false,
+    count: 0,
+    total: 0,
+    category: "tvs",
+    date: "12/29/2019",
+  },
+
+  {
+    id: 32,
+    title: "Sony X950G - 85 Class",
+    img:
+      "https://res.cloudinary.com/duprwuo4j/image/upload/v1590422721/imgs_starwars/EcommerceProject/Sony84Class_jnuptq.png",
+    price: 4995,
+    company: "Sony",
+    info:
+      "Stay at the top of your game with this once in a life time product. NVIDIA G-SYNC technology eliminates screen tearing and stuttering for smooth gameplay, while the 178-degree viewing angle delivers crisp, bright pictures from almost any direction. This product has an ergonomic stand with tilt, swivel, and height adjustment settings for a customized setup, and the 4K resolution offers sharp visuals.",
+    inCart: false,
+    count: 0,
+    total: 0,
+    category: "tvs",
+    date: "12/29/2019",
+  },
+
+  {
+    id: 33,
+    title: "LG UM6970- 75 Class",
+    img:
+      "https://res.cloudinary.com/duprwuo4j/image/upload/v1590422721/imgs_starwars/EcommerceProject/lg75class_uyubgo.png",
+    price: 1995,
+    company: "LG",
+    info:
+      "Stay at the top of your game with this once in a life time product. NVIDIA G-SYNC technology eliminates screen tearing and stuttering for smooth gameplay, while the 178-degree viewing angle delivers crisp, bright pictures from almost any direction. This product has an ergonomic stand with tilt, swivel, and height adjustment settings for a customized setup, and the 4K resolution offers sharp visuals.",
+    inCart: false,
+    count: 0,
+    total: 0,
+    category: "tvs",
+    date: "12/29/2019",
+  },
+
+  {
+    id: 34,
     title: "DynaTAC 8000X",
     img:
       "https://res.cloudinary.com/duprwuo4j/image/upload/v1582951015/imgs_starwars/EcommerceProject/firstcellphone_wjlvle.png",
@@ -461,9 +510,9 @@ export const storeProducts = [
     inCart: false,
     count: 0,
     total: 0,
-    category: "headphones",
-    date: "12/29/2019"
-  }
+    category: "retro",
+    date: "12/29/2019",
+  },
 ];
 
 export const detailProduct = [
@@ -480,6 +529,6 @@ export const detailProduct = [
     count: 0,
     total: 0,
     category: "smartPhones",
-    date: "12/29/2019"
-  }
+    date: "12/29/2019",
+  },
 ];

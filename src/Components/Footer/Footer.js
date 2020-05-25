@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import "font-awesome/css/font-awesome.min.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobeAmericas } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import "../Footer/footer.css";
 
 class Footer extends Component {
@@ -19,18 +21,24 @@ class Footer extends Component {
               More <span>Projects</span>
             </p>
             <a href="https://github.com/DaSilvaBrunoTexas" target="_blank">
-              <i className="fa fa-github-square"></i>
+              <i>
+                <FontAwesomeIcon icon={faGithub} />
+              </i>
             </a>
 
             <a
               href="https://www.linkedin.com/in/bruno-dasilva/"
               target="_blank"
             >
-              <i className="fa fa-linkedin-square"></i>
+              <i>
+                <FontAwesomeIcon icon={faLinkedinIn} />
+              </i>
             </a>
 
             <a href="http://bruno-dasilva.com/" target="_blank">
-              <i className="fa fa-globe"></i>
+              <i>
+                <FontAwesomeIcon icon={faGlobeAmericas} />
+              </i>
             </a>
           </div>
         </footer>

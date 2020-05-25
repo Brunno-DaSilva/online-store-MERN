@@ -134,6 +134,7 @@ body {
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
+  background: #ffffff;
 }
 
 .nav-links ul {
@@ -153,6 +154,7 @@ body {
   text-transform: uppercase;
   opacity: 0;
   transition: opacity 150ms ease-in-out;
+  background-color: #ffffff;
 }
 .nav-toggle {
   z-index: -1;
@@ -161,6 +163,7 @@ body {
 
 .nav-toggle:checked ~ .nav-links {
   transform: scale(1, 1);
+  padding: 0.85rem;
 }
 
 .nav-toggle:checked ~ .nav-links .style-links {
@@ -170,7 +173,6 @@ body {
 
 .style-cart {
   font-size: 1.5rem;
-  padding: 0.6rem;
   color: var(--main-vivid-color);
   transition: 0.4s;
 }
@@ -1143,6 +1145,7 @@ h3 {
 }
 .icon-item-info h3 {
   color: #3c4858;
+
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 2px;
