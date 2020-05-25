@@ -36,15 +36,22 @@ export default class ProductList extends Component {
   };
 
   sortLaptops = () => {
-    const { allProducts, laptops } = this.state;
+    const {
+      allProducts,
+      smartPhones,
+      laptops,
+      monitors,
+      headphones,
+      tvs,
+    } = this.state;
 
     this.setState({
       allProducts: !allProducts,
-      smartPhones: false,
+      smartPhones: smartPhones,
       laptops: !laptops,
-      monitors: false,
-      headphones: false,
-      tvs: false,
+      monitors: monitors,
+      headphones: headphones,
+      tvs: tvs,
     });
   };
 
@@ -114,7 +121,9 @@ export default class ProductList extends Component {
           <button onClick={this.sortSmartPhones}>
             Change State smartPhone
           </button>
+
           <button onClick={this.sortLaptops}> Change State Laptops</button>
+
           <div className="product-list-holder">
             {this.state.allProducts ? (
               <ProductConsumer>
@@ -143,7 +152,7 @@ export default class ProductList extends Component {
                   return value.products
                     .filter(
                       (categoryProduct) =>
-                        categoryProduct.category === "smartPhones"
+                        categoryProduct.category === "laptops"
                     )
                     .map((product) => {
                       return <Product key={product.name} product={product} />;
@@ -156,7 +165,7 @@ export default class ProductList extends Component {
                   return value.products
                     .filter(
                       (categoryProduct) =>
-                        categoryProduct.category === "smartPhones"
+                        categoryProduct.category === "monitors"
                     )
                     .map((product) => {
                       return <Product key={product.name} product={product} />;
@@ -169,7 +178,7 @@ export default class ProductList extends Component {
                   return value.products
                     .filter(
                       (categoryProduct) =>
-                        categoryProduct.category === "smartPhones"
+                        categoryProduct.category === "headphones"
                     )
                     .map((product) => {
                       return <Product key={product.name} product={product} />;
@@ -181,8 +190,7 @@ export default class ProductList extends Component {
                 {(value) => {
                   return value.products
                     .filter(
-                      (categoryProduct) =>
-                        categoryProduct.category === "smartPhones"
+                      (categoryProduct) => categoryProduct.category === "tvs"
                     )
                     .map((product) => {
                       return <Product key={product.name} product={product} />;
@@ -190,7 +198,7 @@ export default class ProductList extends Component {
                 }}
               </ProductConsumer>
             ) : (
-              <h1>None of them is true</h1>
+              <h1>We could not match your search</h1>
             )}
           </div>
         </div>
