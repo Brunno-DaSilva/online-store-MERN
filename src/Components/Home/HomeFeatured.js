@@ -4,6 +4,7 @@ import iPhoneImg from "./images/iphone11right.png";
 import beatsWhite from "./images/beatsWhite.png";
 import { ButtonContainer } from "../StyleComponents/Button";
 import { NavLink } from "react-router-dom";
+import { ProductConsumer } from "../../ContextApi";
 
 export default function HomeFeatured() {
   return (
@@ -64,6 +65,35 @@ export default function HomeFeatured() {
             <img src="https://res.cloudinary.com/duprwuo4j/image/upload/v1582951015/imgs_starwars/EcommerceProject/firstcellphone_wjlvle.png" />
           </div>
         </div>
+      </div>
+      <div className="home-cards-wrapper">
+        <ProductConsumer>
+          {(value) => {
+            // const randomNum = Math.floor(Math.random() * 6 + 3);
+
+            return value.products.slice(23, 29).map((product) => {
+              return (
+                <div className="card-holder">
+                  <div className="top-card">
+                    <img src={product.img} />
+                  </div>
+
+                  <div className="desc-card">
+                    <p>{product.title}</p>
+                    <div className="card-price-ab">
+                      <div>
+                        <p> $ {product.price}</p>
+                      </div>
+                      <NavLink to="/products">
+                        <ButtonContainer>Shop Now</ButtonContainer>
+                      </NavLink>
+                    </div>
+                  </div>
+                </div>
+              );
+            });
+          }}
+        </ProductConsumer>
       </div>
     </div>
   );

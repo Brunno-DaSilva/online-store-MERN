@@ -1250,6 +1250,64 @@ h3 {
   align-items: flex-start;
 }
 
+.home-cards-wrapper {
+  width: 70vw;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.card-holder {
+  width: 30%;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #374455;
+}
+
+.top-card img {
+  width: 400px;
+  height: auto;
+}
+
+.desc-card {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.desc-card p {
+  font-size: 1.6rem;
+  color: #374455;
+}
+
+.card-price-ab {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.card-price-ab div {
+  border: 2px solid #76d3c9;
+  border-radius: 54% 46% 80% 20% / 39% 57% 43% 61%;
+  padding: 0.5rem;
+  background-color: #76d3c9;
+}
+.card-price-ab div p {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
 /*******************************
 *     END - Home Featured    
 *******************************/
