@@ -1117,7 +1117,7 @@ h3 {
 }
 
 .icon-item {
-  width: 18vw;
+  width: 15vw;
   height: 20vh;
   margin: 0.5rem;
   display: flex;
@@ -1138,7 +1138,6 @@ h3 {
 
 .icon-item-top i {
   color: #3c4858;
-
   font-size: 3rem;
   margin-bottom: 1rem;
   list-style: none !important;

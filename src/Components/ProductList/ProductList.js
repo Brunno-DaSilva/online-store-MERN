@@ -114,6 +114,16 @@ export default class ProductList extends Component {
                 </div>
               </div>
             </NavLink>
+            <NavLink to="products">
+              <div className="icon-item">
+                <div className="icon-item-top">
+                  <i class="fas fa-undo-alt"></i>
+                </div>
+                <div className="icon-item-info">
+                  <h3>All</h3>
+                </div>
+              </div>
+            </NavLink>
           </div>
         </div>
 
