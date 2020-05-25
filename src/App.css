@@ -1116,6 +1116,10 @@ h3 {
   text-decoration: none !important;
 }
 
+.shop-item-wrapper {
+  cursor: pointer;
+}
+
 .icon-item {
   width: 15vw;
   height: 20vh;

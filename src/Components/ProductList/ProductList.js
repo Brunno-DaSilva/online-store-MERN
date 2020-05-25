@@ -16,17 +16,10 @@ export default class ProductList extends Component {
   };
 
   sortSmartPhones = () => {
-    const {
-      allProducts,
-      smartPhones,
-      laptops,
-      monitors,
-      headphones,
-      tvs,
-    } = this.state;
+    const { smartPhones, laptops, monitors, headphones, tvs } = this.state;
 
     this.setState({
-      allProducts: !allProducts,
+      allProducts: false,
       smartPhones: !smartPhones,
       laptops: laptops,
       monitors: monitors,
@@ -46,12 +39,12 @@ export default class ProductList extends Component {
     } = this.state;
 
     this.setState({
-      allProducts: !allProducts,
-      smartPhones: smartPhones,
+      allProducts: allProducts,
+      smartPhones: !smartPhones,
       laptops: !laptops,
-      monitors: monitors,
-      headphones: headphones,
-      tvs: tvs,
+      monitors: !monitors,
+      headphones: !headphones,
+      tvs: !tvs,
     });
   };
 
@@ -63,7 +56,8 @@ export default class ProductList extends Component {
             <h1>Shop the Latest Tech</h1>
           </div>
           <div className="body-icon-container">
-            <NavLink to="products">
+            {/* shopItems list  */}
+            <div onClick={this.sortLaptops}>
               <div className="icon-item">
                 <div className="icon-item-top">
                   <i className="fas fa-laptop"></i>
@@ -72,9 +66,9 @@ export default class ProductList extends Component {
                   <h3>Laptops</h3>
                 </div>
               </div>
-            </NavLink>
+            </div>
 
-            <NavLink to="products">
+            <div className="shop-item-wrapper" onClick={this.sortSmartPhones}>
               <div className="icon-item">
                 <div className="icon-item-top">
                   <i className="fas fa-mobile-alt"></i>
@@ -83,7 +77,7 @@ export default class ProductList extends Component {
                   <h3>Smart Phones</h3>
                 </div>
               </div>
-            </NavLink>
+            </div>
             <NavLink to="products">
               <div className="icon-item">
                 <div className="icon-item-top">
@@ -128,12 +122,6 @@ export default class ProductList extends Component {
         </div>
 
         <div className="product-list-container">
-          <button onClick={this.sortSmartPhones}>
-            Change State smartPhone
-          </button>
-
-          <button onClick={this.sortLaptops}> Change State Laptops</button>
-
           <div className="product-list-holder">
             {this.state.allProducts ? (
               <ProductConsumer>
