@@ -66,6 +66,7 @@ export default function HomeFeatured() {
           </div>
         </div>
       </div>
+
       <div className="home-cards-wrapper">
         <ProductConsumer>
           {(value) => {
