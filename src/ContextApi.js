@@ -6,7 +6,7 @@ const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
   state = {
-    hasSignedUp: false,
+    authenticated: false,
     products: [],
     detailProduct: detailProduct,
     cart: [],

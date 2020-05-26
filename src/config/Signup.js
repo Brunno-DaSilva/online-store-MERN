@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import fire from "./Firebase";
+
 import loginImg from "./login-img.png";
 import logoTypeImg from "./logotypewhite.png";
 
@@ -10,20 +10,27 @@ export default class Signup extends Component {
     password: "",
   };
 
-  handleChange(e) {
-    e.preventDefault();
-    this.setState({ [e.target.name]: e.target.value });
-  }
+  updateEmail = (e) => {
+    this.setState({
+      email: e.target.value,
+    });
+  };
 
-  signup(e) {
+  updatePassword = (e) => {
+    this.setState({
+      password: e.target.value,
+    });
+  };
+
+  onSubmit = (e) => {
     e.preventDefault();
-    fire
-      .auth()
-      .createUserWithEmailAndPassword(this.state.email, this.state.password)
-      .catch((error) => {
-        console.log(error);
-      });
-  }
+    this.props.onSignUp(this.state);
+    this.setState({
+      email: "",
+      password: "",
+    });
+  };
+
   render() {
     return (
       <div>
@@ -32,56 +39,40 @@ export default class Signup extends Component {
             <img src={loginImg} alt="Login Image" />
           </div>
           <div className="form-container">
-            <form>
+            {/* the form starts here */}
+
+            <form onSubmit={this.onSubmit}>
               <div className="logo-type">
                 <img src={logoTypeImg} alt="LogoType" />
               </div>
-              {/* <div class="form-group">
-                <label for="exampleInputEmail1">Name</label>
-                <input
-                  value={this.state.name}
-                  onChange={this.handleChange}
-                  type="text"
-                  name="name"
-                  id="name"
-                  aria-describedby="emailHelp"
-                  placeholder="Your name"
-                />
-              </div> */}
+
               <div class="form-group">
                 <label for="exampleInputEmail1">Email</label>
                 <input
-                  value={this.state.email}
-                  onChange={this.handleChange}
                   type="email"
                   name="email"
                   id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
                   placeholder="Email address"
+                  value={this.state.email}
+                  onChange={this.updateEmail}
                 />
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
                 <input
-                  value={this.state.password}
-                  onChange={this.handleChange}
                   type="password"
                   name="password"
                   class="form-control"
                   id="exampleInputPassword1"
                   placeholder="Password"
+                  value={this.state.password}
+                  onChange={this.updatePassword}
                 />
               </div>
               <div className="btn-holder">
-                <NavLink to="/home">
-                  <button
-                    type="submit"
-                    onClick={this.login}
-                    className="btn-details"
-                  >
-                    Login
-                  </button>
-                </NavLink>
+                <button type="submit" className="btn-details">
+                  Sign Up
+                </button>
               </div>
             </form>
           </div>

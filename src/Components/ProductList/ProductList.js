@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Product from "../Product/Product";
-import { NavLink } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import { ProductConsumer } from "../../ContextApi";
 // import HomeServices from "../Home/HomeServices";

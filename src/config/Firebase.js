@@ -1,6 +1,6 @@
 import firebase from "firebase";
 // Your web app's Firebase configuration
-const config = {
+const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_KEY,
   authDomain: process.env.REACT_APP_FIREBASE_DOMAIN,
   databaseURL: process.env.REACT_APP_FIREBASE_DATABASE,
@@ -11,6 +11,11 @@ const config = {
   measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
-const fire = firebase.initializeApp(config);
+// Initialize Firebase
+const firebaseApp = firebase.initializeApp(firebaseConfig);
 
-export default fire;
+firebase.analytics();
+
+export const auth = firebaseApp.auth();
+
+export default firebaseApp;

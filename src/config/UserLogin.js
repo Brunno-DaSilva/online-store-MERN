@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import fire from "./Firebase";
+import firebaseApp from "./Firebase";
 import { ProductConsumer } from "../ContextApi";
 
 import loginImg from "./login-img.png";
@@ -11,103 +11,84 @@ class UserLogin extends Component {
     email: "",
     password: "",
   };
+  updateEmail = (e) => {
+    this.setState({
+      email: e.target.value,
+    });
+  };
 
-  handleChange(e) {
-    this.setState({ [e.target.name]: e.target.value });
-  }
+  updatePassword = (e) => {
+    this.setState({
+      password: e.target.value,
+    });
+  };
 
-  login(e) {
+  login = (e) => {
     e.preventDefault();
-    fire
-      .auth()
-      .signInWithEmailAndPassword(this.state.email, this.state.password)
-      .catch((error) => {
-        console.log(error);
-      });
-  }
-
-  // handleSignUp(e) {
-  //   e.preventDefault();
-  //   fire
-  //     .auth()
-  //     .createUserWithEmailAndPassword(this.state.email, this.state.password)
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // }
+    this.props.onLogin(this.state);
+    this.setState({
+      email: "",
+      password: "",
+    });
+  };
 
   render() {
     return (
       <div>
-        <ProductConsumer>
-          {(value) => {
-            const { onSignUp, hasSignedUp } = value;
-
-            return (
-              <div className="user-login-container">
-                <div className="login-img">
-                  <img src={loginImg} alt="Login Image" />
-                </div>
-                <div className="form-container">
-                  <form onSubmit={onSignUp}>
-                    <div className="logo-type">
-                      <img src={logoTypeImg} alt="LogoType" />
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Email</label>
-                      <input
-                        value={this.state.email}
-                        onChange={this.handleChange}
-                        type="email"
-                        name="email"
-                        class="form-control"
-                        id="exampleInputEmail1"
-                        aria-describedby="emailHelp"
-                        placeholder="Enter email"
-                      />
-                    </div>
-
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Password</label>
-                      <input
-                        value={this.state.password}
-                        onChange={this.handleChange}
-                        type="password"
-                        name="password"
-                        class="form-control"
-                        id="exampleInputPassword1"
-                        placeholder="Password"
-                      />
-                    </div>
-
-                    <div className="btn-holder">
-                      <NavLink to="/home">
-                        <button
-                          onClick={this.login}
-                          type="submit"
-                          className="btn-details"
-                        >
-                          Login
-                        </button>
-                      </NavLink>
-
-                      <NavLink to="/home">
-                        <button
-                          onClick={() => onSignUp()}
-                          type="submit"
-                          style={{ marginLeft: "25px" }}
-                          className="btn-details"
-                        >
-                          Signup
-                        </button>
-                      </NavLink>
-                    </div>
-                  </form>
-                </div>
+        <div className="user-login-container">
+          <div className="login-img">
+            <img src={loginImg} alt="Login Image" />
+          </div>
+          <div className="form-container">
+            <form onSubmit={this.login}>
+              <div className="logo-type">
+                <img src={logoTypeImg} alt="LogoType" />
               </div>
-            );
-          }}
-        </ProductConsumer>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input
+                  value={this.state.email}
+                  onChange={this.updateEmail}
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input
+                  value={this.state.password}
+                  onChange={this.updatePassword}
+                  type="password"
+                  name="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Password"
+                />
+              </div>
+
+              <div className="btn-holder">
+                <button type="submit" className="btn-details">
+                  Login
+                </button>
+
+                <NavLink to="/signup">
+                  <button
+                    type="submit"
+                    style={{ marginLeft: "25px" }}
+                    className="btn-details"
+                  >
+                    Signup
+                  </button>
+                </NavLink>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     );
   }

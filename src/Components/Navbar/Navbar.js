@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../logo.png";
 // import { ButtonContainer } from "../StyleComponents/Button";
+import { ProductConsumer } from "../../ContextApi";
 import fire from "../../config/Firebase";
 
 export default class Navbar extends Component {
