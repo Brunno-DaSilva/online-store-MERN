@@ -1026,7 +1026,7 @@ input[type="password"]:focus {
   *******************************/
 
 .slide-container {
-  margin-top: -4rem !important;
+  margin-top: -12rem !important;
   width: 90%;
   margin: auto;
 }
