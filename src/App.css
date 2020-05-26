@@ -1284,7 +1284,7 @@ h3 {
 }
 
 .home-cards-wrapper {
-  width: 70vw;
+  width: 100vw;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -1303,8 +1303,14 @@ h3 {
   border: 1px solid #d1d1d1;
 }
 
+.top-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .top-card img {
-  width: 400px;
+  width: 70%;
   height: auto;
 }
 
