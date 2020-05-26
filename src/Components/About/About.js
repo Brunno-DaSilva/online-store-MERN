@@ -1,4 +1,12 @@
 import React, { Component } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHandshake,
+  faCheckCircle,
+  faHeart,
+  faMugHot,
+  faLaptop,
+} from "@fortawesome/free-solid-svg-icons";
 
 import "./about.css";
 
@@ -43,13 +51,17 @@ export default class About extends Component {
         <div className="text-area">
           <div className="text-one">
             <p className="icon-holder">
-              <i className="fa fa-heart"></i>
+              <i>
+                <FontAwesomeIcon icon={faHeart} />
+              </i>
             </p>
             <p className="text-holder">
               I am particularly passionate about my family, well designed, clean
               coded-front-to-back-web applications, to serve poor communities in
               my spare time, and to drink coffee
-              <i className="fa fa-coffee"></i>
+              <i>
+                <FontAwesomeIcon icon={faMugHot} />
+              </i>
             </p>
           </div>
 
@@ -61,12 +73,16 @@ export default class About extends Component {
               coffee <i className="fa fa-mug-hot"></i>
             </p>
             <p className="icon-holder">
-              <i className="fa fa-check-circle"></i>
+              <i>
+                <FontAwesomeIcon icon={faCheckCircle} />
+              </i>
             </p>
           </div>
           <div className="text-three">
             <p className="icon-holder">
-              <i className="fa fa-handshake-o"></i>
+              <i>
+                <FontAwesomeIcon icon={faHandshake} />
+              </i>
             </p>
             <p className="text-holder">
               My previous experiences as a full-time missionary and 6+ years in
@@ -79,7 +95,9 @@ export default class About extends Component {
 
           <div className="text-four">
             <p className="icon-holder">
-              <i className="fa fa-laptop"></i>
+              <i>
+                <FontAwesomeIcon icon={faLaptop} />
+              </i>
             </p>
             <p className="text-holder">
               I am always searching for self-improvement. So, I completed a
@@ -94,9 +112,9 @@ export default class About extends Component {
           </div>
         </div>
 
-        <div className="sub-title">
+        <div className="sub-title-more-projects">
           <h1>
-            Some
+            More
             <span className="span-one">
               <span className="span-two">Projects</span>
             </span>

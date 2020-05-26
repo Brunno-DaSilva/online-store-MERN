@@ -51,6 +51,7 @@ section {
 .span-two {
   color: #c9dded;
 }
+
 .intro-container-about {
   display: flex;
   flex-direction: row;
@@ -193,6 +194,7 @@ section {
 
 .text-holder i {
   color: var(--light-font-color);
+  margin-left: 0.3rem;
 }
 
 /*******************
@@ -345,6 +347,24 @@ section {
   transform: rotate(3deg);
   z-index: 9;
 }
+
+.sub-title-more-projects h1 {
+  color: #95acb3;
+  font-size: 3.8rem;
+  letter-spacing: 4px;
+  font-family: "Shadows Into Light Two", cursive;
+  transform: rotate(3deg);
+  z-index: 9;
+}
+.sub-title-more-projects .span-one {
+  color: #f6d55c;
+  text-decoration: underline;
+}
+
+.sub-title-more-projects .span-two {
+  color: #95acb3;
+}
+
 .projects {
   margin-top: 4%;
   display: flex;
