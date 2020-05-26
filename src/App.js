@@ -11,6 +11,7 @@ import UserLogin from "./config/UserLogin";
 import Signup from "./config/Signup";
 import Home from "./Components/Home/Home";
 import "./App.css";
+require("dotenv").config();
 
 function App() {
   return (
@@ -27,7 +28,6 @@ function App() {
         <Route path="/signup" component={Signup} />
         <Route component={PageNotFound} />
       </Switch>
-
       <Modal />
     </React.Fragment>
   );
