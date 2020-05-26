@@ -42,7 +42,9 @@ const Navbar = ({ isLoggedIn, logout, email }) => {
             <li className="user-login">
               <NavLink to="/login" className="style-links">
                 {isLoggedIn ? (
-                  <span>Welcome {email}</span>
+                  <span className="user-email-format">
+                    Welcome <span>{email}</span>
+                  </span>
                 ) : (
                   <span> Login</span>
                 )}

@@ -477,6 +477,21 @@ body {
   color: var(--main-vivid-color);
 }
 
+.user-login span {
+  margin-left: 0.7rem !important;
+}
+.user-email-format span {
+  color: var(--main-vivid-color);
+  text-transform: lowercase;
+}
+
+.user-email-format::after {
+  content: "";
+  border-bottom: 4px solid var(--main-vivid-color);
+  width: 14vw;
+  display: block;
+}
+
 .user-login-container {
   width: 100vw;
   height: 75vh;
@@ -486,6 +501,7 @@ body {
   align-items: center;
   position: fixed;
 }
+
 .form-container {
   position: absolute;
   width: 100vw;
