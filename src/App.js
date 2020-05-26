@@ -68,7 +68,11 @@ export default class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Navbar></Navbar>
+        <Navbar
+          logout={this.logout}
+          isLoggedIn={this.state.isLoggedIn}
+          email={this.state.email}
+        ></Navbar>
 
         <Switch>
           <Route exact path="/home" component={Home}></Route>
