@@ -52,12 +52,12 @@ const Navbar = ({ isLoggedIn, logout, email }) => {
             </li>
             <li className="user-signup">
               <NavLink to="/signup" className="style-links">
-                Signup
+                {isLoggedIn ? "" : <span id="user-signup">signup</span>}
               </NavLink>
             </li>
             <li onClick={logout} className="user-logout">
               <NavLink to="/home" className="style-links">
-                <span>Logout</span>
+                <span id="user-logout">Logout</span>
               </NavLink>
             </li>
           </ul>
