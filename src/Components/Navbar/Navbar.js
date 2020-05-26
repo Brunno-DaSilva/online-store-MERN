@@ -16,25 +16,25 @@ const Navbar = ({ isLoggedIn, logout, email }) => {
 
         <div className="nav-links">
           <ul>
-            <li className="">
+            <li>
               <NavLink to="/home" className="style-links">
                 Home
               </NavLink>
             </li>
-            <li className="">
+            <li>
               <NavLink to="/products" className="style-links">
                 Products
               </NavLink>
             </li>
-            <li className="">
+            <li>
               <NavLink to="/about" className="style-links">
                 About
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/cart" className="style-cart ">
-                <span className="">
+              <NavLink to="/cart" className="style-cart">
+                <span>
                   <i className="fab fa-opencart" />
                 </span>
               </NavLink>
@@ -46,7 +46,7 @@ const Navbar = ({ isLoggedIn, logout, email }) => {
                     Welcome <span>{email}</span>
                   </span>
                 ) : (
-                  <span> Login</span>
+                  <span id="user-logIn"> Login</span>
                 )}
               </NavLink>
             </li>

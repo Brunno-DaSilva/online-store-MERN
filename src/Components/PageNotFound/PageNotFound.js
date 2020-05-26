@@ -22,12 +22,14 @@ export default class PageNotFound extends Component {
             </div>
           </NavLink>
           <div>
-            <h3>Oops, Sorry! Back to Products or check out this options </h3>
+            <h3>
+              Oops, Sorry! Go back to products or check out these options{" "}
+            </h3>
           </div>
           <div className="image-gallery-direction">
             <ProductConsumer>
-              {value => {
-                return value.products.slice(0, 3).map(product => {
+              {(value) => {
+                return value.products.slice(0, 3).map((product) => {
                   return <ImageGallery key={product.name} product={product} />;
                 });
               }}
