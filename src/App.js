@@ -82,7 +82,6 @@ export default class App extends Component {
           <Route path="/about" component={AboutThisApp}></Route>
           <Route
             path="/login"
-            component={UserLogin}
             render={(props) => (
               <UserLogin
                 {...props}

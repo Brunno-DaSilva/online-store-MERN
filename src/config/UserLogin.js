@@ -11,6 +11,7 @@ class UserLogin extends Component {
     email: "",
     password: "",
   };
+
   updateEmail = (e) => {
     this.setState({
       email: e.target.value,
@@ -33,6 +34,7 @@ class UserLogin extends Component {
   };
 
   render() {
+    console.log("UserLoginProps", this.props);
     return (
       <div>
         <div className="user-login-container">
