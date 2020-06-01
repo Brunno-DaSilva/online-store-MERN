@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import firebaseApp from "./Firebase";
-import { ProductConsumer } from "../ContextApi";
-
 import loginImg from "./login-img.png";
 import logoTypeImg from "./logotypewhite.png";
 
