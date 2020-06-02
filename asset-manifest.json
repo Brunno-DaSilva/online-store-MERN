@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/DaSilvaBrunoTexas/online-store-MERN/static/css/main.d0448dec.chunk.css",
+    "main.js": "/DaSilvaBrunoTexas/online-store-MERN/static/js/main.d97ee77c.chunk.js",
+    "main.js.map": "/DaSilvaBrunoTexas/online-store-MERN/static/js/main.d97ee77c.chunk.js.map",
+    "runtime-main.js": "/DaSilvaBrunoTexas/online-store-MERN/static/js/runtime-main.47fa9a03.js",
+    "runtime-main.js.map": "/DaSilvaBrunoTexas/online-store-MERN/static/js/runtime-main.47fa9a03.js.map",
+    "static/css/2.5ffa1744.chunk.css": "/DaSilvaBrunoTexas/online-store-MERN/static/css/2.5ffa1744.chunk.css",
+    "static/js/2.7745fb12.chunk.js": "/DaSilvaBrunoTexas/online-store-MERN/static/js/2.7745fb12.chunk.js",
+    "static/js/2.7745fb12.chunk.js.map": "/DaSilvaBrunoTexas/online-store-MERN/static/js/2.7745fb12.chunk.js.map",
+    "index.html": "/DaSilvaBrunoTexas/online-store-MERN/index.html",
+    "precache-manifest.09dec48211e08835047c894d90f428f6.js": "/DaSilvaBrunoTexas/online-store-MERN/precache-manifest.09dec48211e08835047c894d90f428f6.js",
+    "service-worker.js": "/DaSilvaBrunoTexas/online-store-MERN/service-worker.js",
+    "static/css/2.5ffa1744.chunk.css.map": "/DaSilvaBrunoTexas/online-store-MERN/static/css/2.5ffa1744.chunk.css.map",
+    "static/css/main.d0448dec.chunk.css.map": "/DaSilvaBrunoTexas/online-store-MERN/static/css/main.d0448dec.chunk.css.map",
+    "static/js/2.7745fb12.chunk.js.LICENSE.txt": "/DaSilvaBrunoTexas/online-store-MERN/static/js/2.7745fb12.chunk.js.LICENSE.txt",
+    "static/media/CartIsEmpty.png": "/DaSilvaBrunoTexas/online-store-MERN/static/media/CartIsEmpty.922d19bd.png",
+    "static/media/ImageThree.png": "/DaSilvaBrunoTexas/online-store-MERN/static/media/ImageThree.15a93fad.png",
+    "static/media/beatsWhite.png": "/DaSilvaBrunoTexas/online-store-MERN/static/media/beatsWhite.ffc4de6f.png",
+    "static/media/headphone.png": "/DaSilvaBrunoTexas/online-store-MERN/static/media/headphone.7d0d8b29.png",
+    "static/media/imageOne.png": "/DaSilvaBrunoTexas/online-store-MERN/static/media/imageOne.97aa618e.png",
+    "static/media/imageTwo.png": "/DaSilvaBrunoTexas/online-store-MERN/static/media/imageTwo.27aabddc.png",
+    "static/media/iphone11right.png": "/DaSilvaBrunoTexas/online-store-MERN/static/media/iphone11right.d0ed0047.png",
+    "static/media/login-img.png": "/DaSilvaBrunoTexas/online-store-MERN/static/media/login-img.c5dc15bd.png",
+    "static/media/logo.png": "/DaSilvaBrunoTexas/online-store-MERN/static/media/logo.9bd5e5ad.png",
+    "static/media/logotype.png": "/DaSilvaBrunoTexas/online-store-MERN/static/media/logotype.ace98357.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.47fa9a03.js",
+    "static/css/2.5ffa1744.chunk.css",
+    "static/js/2.7745fb12.chunk.js",
+    "static/css/main.d0448dec.chunk.css",
+    "static/js/main.d97ee77c.chunk.js"
+  ]
+}
